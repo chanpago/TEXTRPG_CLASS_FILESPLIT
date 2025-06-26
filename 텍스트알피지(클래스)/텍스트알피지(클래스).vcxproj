@@ -129,14 +129,33 @@
   <ItemGroup>
     <ClCompile Include="CMainGame.cpp" />
     <ClCompile Include="CObject.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="M1_MagicClaw.cpp" />
+    <ClCompile Include="MagicianSkill.cpp" />
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="T1_LuckySeven.cpp" />
+    <ClCompile Include="ThiefSkill.cpp" />
+    <ClCompile Include="W0_BasicSkill.cpp" />
+    <ClCompile Include="W1_PowerStrike.cpp" />
+    <ClCompile Include="WarriorSkill.cpp" />
     <ClCompile Include="텍스트알피지(클래스).cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMainGame.h" />
     <ClInclude Include="CObject.h" />
+    <ClInclude Include="CPlayer.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="M1_MagicClaw.h" />
+    <ClInclude Include="MagicianSkill.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="pch_Skill.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="T1_LuckySeven.h" />
+    <ClInclude Include="ThiefSkill.h" />
+    <ClInclude Include="W0_BasicSkill.h" />
+    <ClInclude Include="W1_PowerStrike.h" />
+    <ClInclude Include="WarriorSkill.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

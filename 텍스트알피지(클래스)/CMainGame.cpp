@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CMainGame.h"
+#include "W0_BasicSkill.h"
 
 CMainGame::CMainGame(): m_pPlayer(nullptr) {}
 
@@ -7,13 +8,13 @@ CMainGame::~CMainGame()
 {
 	Release();
 }
-
+																																			   
 bool CMainGame::Initialize()
 {
 	//여기에 플레이어 생성하는 함수 들어가야 할듯
 	if (!m_pPlayer)
 	{
-		m_pPlayer = new CObject;
+		m_pPlayer = new CPlayer;
 		return m_pPlayer->Initialize();
 	}
 }
@@ -108,7 +109,7 @@ void CMainGame::Field()
 	}
 }
 
-void CMainGame::Fight(CObject* pPlayer, CObject* pEnemy)
+void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
 {
 	int iInput(0);
 
@@ -118,16 +119,19 @@ void CMainGame::Fight(CObject* pPlayer, CObject* pEnemy)
 		system("cls");
 		pPlayer->Render();
 		pEnemy->Render();
-		std::cout << "1. 공격 2. 도망 : ";
+		std::cout << "1. 공격 2.스킬 사용 3. 도망 : ";
 		std::cin >> iInput;
 
 		switch (iInput)
 		{
 		case 1:
-			pEnemy->Update(pPlayer->GetObjectATK());
-			pPlayer->Update(pEnemy->GetObjectATK());
+			pEnemy->Update(2,pPlayer->GetObjectATK());
+			pPlayer->Update(2,pEnemy->GetObjectATK());
 			break;
 		case 2:
+			SkillAttack(pPlayer, pEnemy);
+			break;
+		case 3:
 			return;
 		default:
 			std::cout << "잘못 누르셨습니다" << std::endl;
@@ -152,4 +156,41 @@ void CMainGame::Fight(CObject* pPlayer, CObject* pEnemy)
 			return;
 		}
 	}
+}
+
+void CMainGame::SkillAttack(CPlayer* pPlayer, CObject* pEnemy)
+{
+	int iInput(0);
+
+	while (true)
+	{
+		if (pEnemy->GetObjectHP() <= 0)return;
+		system("cls");
+		pPlayer->Render();
+		pEnemy->Render();
+		std::cout << "몇 번째 스킬을 사용하시겠습니까? 0입력->나가기 :";
+		std::cin >> iInput;
+
+		if (iInput > pPlayer->GetSkillsCount() || iInput < 0)
+		{
+			std::cout << "잘못 누르셨습니다" << std::endl;
+			system("pause");
+			continue;
+		}
+		else if (iInput == 0)
+		{
+			return;
+		}
+		else
+		{
+			
+			// 스킬 이름 출력
+			std::cout << "사용한 스킬: [ " << pPlayer->GetSkill(iInput - 1)->GetSkillName() << " ]" << std::endl;
+
+			pEnemy->Update(2,pPlayer->GetSkill(iInput - 1)->UseSkill(pPlayer->GetObjectATK()));
+			pPlayer->Update(2,pEnemy->GetObjectATK());
+			system("pause");
+		}
+	}
+	
 }

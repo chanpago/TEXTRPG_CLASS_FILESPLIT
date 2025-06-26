@@ -1,6 +1,6 @@
 #pragma once
-
-#include "CObject.h"
+#include "pch.h"
+#include "CPlayer.h"
 
 class CMainGame
 {
@@ -17,9 +17,10 @@ public:
 	void		Update();			// 메 프레임마다 변경되는 값에 대한 적용함수
 	void		Release();			// 동적할당한 메모리 헤제 코드 모아놓는함수
 	void		Field();
-	void		Fight(CObject* pPlayer, CObject* pEnemy);
+	void		Fight(CPlayer* pPlayer, CObject* pEnemy);
+	void		SkillAttack(CPlayer* pPlayer, CObject* pEnemy);
 private:
-	CObject*		m_pPlayer;
+	CPlayer*		m_pPlayer;
 
 };
 

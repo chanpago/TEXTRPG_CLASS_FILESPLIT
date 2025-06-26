@@ -22,6 +22,30 @@
     <Filter Include="Object">
       <UniqueIdentifier>{06be3065-7400-44e4-ac22-696e0de19656}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{608ec2db-4f14-4aa1-9f17-a21bff46551a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="전사스킬">
+      <UniqueIdentifier>{249ed986-f381-455e-8678-c9bcb2687251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="전사스킬\1차스킬">
+      <UniqueIdentifier>{040fe066-3c46-42b6-b15d-323d4d05b7d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬">
+      <UniqueIdentifier>{00abe3fb-712c-4669-a520-909d923982b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="마법사스킬">
+      <UniqueIdentifier>{7a8a230b-11e4-4ad9-871a-9f90c4c0a6b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="마법사스킬\1차스킬">
+      <UniqueIdentifier>{03d30463-25dd-4da4-97ba-706c1917abd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="도적스킬">
+      <UniqueIdentifier>{4ef2d053-8b47-480a-a8d3-ee09b4815773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="도적스킬\1차스킬">
+      <UniqueIdentifier>{5f4a8686-0b75-485a-ad64-70643b3f7f1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="텍스트알피지(클래스).cpp">
@@ -36,6 +60,33 @@
     <ClCompile Include="CObject.cpp">
       <Filter>Object</Filter>
     </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="WarriorSkill.cpp">
+      <Filter>전사스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="W1_PowerStrike.cpp">
+      <Filter>전사스킬\1차스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="W0_BasicSkill.cpp">
+      <Filter>통합스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="M1_MagicClaw.cpp">
+      <Filter>마법사스킬\1차스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicianSkill.cpp">
+      <Filter>마법사스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="Skill.cpp">
+      <Filter>통합스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="ThiefSkill.cpp">
+      <Filter>도적스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="T1_LuckySeven.cpp">
+      <Filter>도적스킬\1차스킬</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -49,6 +100,36 @@
     </ClInclude>
     <ClInclude Include="CObject.h">
       <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="WarriorSkill.h">
+      <Filter>전사스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="W1_PowerStrike.h">
+      <Filter>전사스킬\1차스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="W0_BasicSkill.h">
+      <Filter>통합스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="MagicianSkill.h">
+      <Filter>마법사스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skill.h">
+      <Filter>통합스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="M1_MagicClaw.h">
+      <Filter>마법사스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="ThiefSkill.h">
+      <Filter>도적스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="T1_LuckySeven.h">
+      <Filter>도적스킬\1차스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="pch_Skill.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
