@@ -60,33 +60,38 @@ void CMainGame::Field()
 	int		iInput(0);
 	bool	bSave(false);
 
-	CObject* CEnemy = nullptr;
+	CObject* pEnemy = nullptr;
 	while (true)
 	{
 		system("cls");
 		m_pPlayer->Render();
-		std::cout << "1. 초급 2. 중급 3. 고급 4. 저장하기 5. 전 단계 : ";
+		std::cout << "1. 초급 2. 중급 3. 고급 4. 저장하기 5. 스텟찍기 6. 전 단계 : ";
 		std::cin >> iInput;
 
+		// 몬스터 셋 오브젝트 파라미터 설명
+		// 이름, 종류, 공격력, 체력, 마나, 경험치, 레벨, 타입
 		switch (iInput)
 		{
 		case 1:
-			CEnemy = new CObject;
-			CEnemy->SetObject("초급", 30 * iInput, 3 * iInput);
+			pEnemy = new CEnemy_Slime;
+			pEnemy->SetObject("슬라임", "몬스터", 5 * iInput, 50, 0, 8, 1, 0);
 			break;
 		case 2:
-			CEnemy = new CObject;
-			CEnemy->SetObject("중급", 30 * iInput, 3 * iInput);
+			pEnemy = new CEnemy_RibbonPig;
+			pEnemy->SetObject("리본돼지", "몬스터", 5 * iInput, 80, 0, 15, 1, 0);
 			break;
 		case 3:
-			CEnemy = new CObject;
-			CEnemy->SetObject("고급", 30 * iInput, 3 * iInput);
+			pEnemy = new CEnemy_MushMom;
+			pEnemy->SetObject("머쉬맘", "몬스터", 5 * iInput, 100, 0, 30, 1, 0);
 			break;
 		case 4:
 			// save 구현
-			bSave = m_pPlayer->Save();
+			//bSave = m_pPlayer->Save();
 			break;
 		case 5:
+			m_pPlayer->SetStat();
+			break;
+		case 6:
 			return;
 		default:
 			std::cout << "잘못 누르셨습니다" << std::endl;
@@ -99,11 +104,12 @@ void CMainGame::Field()
 			bSave = false;
 			continue;
 		}
+		if (iInput == 5)continue;
 		else
 		{
 			// fight
-			Fight(m_pPlayer, CEnemy);		
-			SAFE_DELETE(CEnemy);
+			Fight(m_pPlayer, pEnemy);
+			SAFE_DELETE(pEnemy);
 		}
 
 	}
@@ -118,6 +124,10 @@ void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
 	{
 		system("cls");
 		pPlayer->Render();
+
+		std::cout << std::endl;
+		std::cout << std::endl;
+
 		pEnemy->Render();
 		std::cout << "1. 공격 2.스킬 사용 3. 도망 : ";
 		std::cin >> iInput;
@@ -140,7 +150,10 @@ void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
 
 		if (pEnemy->GetObjectHP() <= 0)
 		{
+			pEnemy->Die();
 			std::cout << "승리!" << std::endl;
+			std::cout << "경험치 " << pEnemy->GetEXP() << "를 획득 하였습니다!" << std::endl;
+			pPlayer->AddEXP(pEnemy->GetEXP());
 			system("pause");
 
 			if (m_pPlayer->GetObjectHP() <= 0) m_pPlayer->SetObjectHP(100);
@@ -149,8 +162,8 @@ void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
 		}
 		else if (pPlayer->GetObjectHP() <= 0)
 		{
-			std::cout << "패배..." << std::endl;
-
+			
+			pPlayer->Die();
 			pPlayer->SetObjectHP(100);
 			system("pause");
 			return;
@@ -182,8 +195,7 @@ void CMainGame::SkillAttack(CPlayer* pPlayer, CObject* pEnemy)
 			return;
 		}
 		else
-		{
-			
+		{	
 			// 스킬 이름 출력
 			std::cout << "사용한 스킬: [ " << pPlayer->GetSkill(iInput - 1)->GetSkillName() << " ]" << std::endl;
 

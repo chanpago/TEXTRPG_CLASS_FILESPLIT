@@ -1,6 +1,8 @@
 #pragma once
 #include "pch.h"
+#include "pch_Monster.h"
 #include "CPlayer.h"
+
 
 class CMainGame
 {

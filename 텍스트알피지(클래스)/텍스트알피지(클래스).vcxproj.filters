@@ -46,6 +46,12 @@
     <Filter Include="도적스킬\1차스킬">
       <UniqueIdentifier>{5f4a8686-0b75-485a-ad64-70643b3f7f1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{e43faec5-aad1-4531-8538-cc8d40abd507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy\헤네시스">
+      <UniqueIdentifier>{b0deeaeb-6a1c-4335-8e45-1408138cba5a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="텍스트알피지(클래스).cpp">
@@ -86,6 +92,18 @@
     </ClCompile>
     <ClCompile Include="T1_LuckySeven.cpp">
       <Filter>도적스킬\1차스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Slime.cpp">
+      <Filter>Enemy\헤네시스</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_RibbonPig.cpp">
+      <Filter>Enemy\헤네시스</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_MushMom.cpp">
+      <Filter>Enemy\헤네시스</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +148,21 @@
     </ClInclude>
     <ClInclude Include="pch_Skill.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_Slime.h">
+      <Filter>Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_RibbonPig.h">
+      <Filter>Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="pch_Monster.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_MushMom.h">
+      <Filter>Enemy\헤네시스</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
