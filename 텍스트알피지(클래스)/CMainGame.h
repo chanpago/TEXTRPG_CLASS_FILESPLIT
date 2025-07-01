@@ -20,6 +20,7 @@ public:
 	void		Release();			// 동적할당한 메모리 헤제 코드 모아놓는함수
 	void		Field();
 	void		Fight(CPlayer* pPlayer, CObject* pEnemy);
+	void		Shop();
 	void		SkillAttack(CPlayer* pPlayer, CObject* pEnemy);
 private:
 	CPlayer*		m_pPlayer;

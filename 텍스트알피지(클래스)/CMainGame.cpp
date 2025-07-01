@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CMainGame.h"
 #include "W0_BasicSkill.h"
+#include "CTier3Shop.h"
 
 CMainGame::CMainGame(): m_pPlayer(nullptr) {}
 
@@ -29,7 +30,7 @@ void CMainGame::Update()
 
 		// 플레이어 정보 출력함수
 		m_pPlayer->Render();
-		std::cout << "1. 사냥터 2. 종료 : ";
+		std::cout << "1. 사냥터 2. 상점 3. 종료 : ";
 		std::cin >> iInput;
 
 		switch (iInput)
@@ -38,6 +39,9 @@ void CMainGame::Update()
 			Field();
 			break;
 		case 2:
+			Shop();
+			break;
+		case 3:
 			return;
 		default:
 			std::cout << "잘못 누르셨습니다" << std::endl;
@@ -167,6 +171,42 @@ void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
 			pPlayer->SetObjectHP(100);
 			system("pause");
 			return;
+		}
+	}
+}
+
+void CMainGame::Shop()
+{
+	int iInput(0);
+
+	CBaseShop* pShop = nullptr;
+
+	while (true)
+	{
+		system("cls");
+		//std::cout << "========================================" << std::endl;
+		std::cout << "1. 초급상점 2. 중급상점 3. 고급상점 4.나가기: ";
+		std::cin >> iInput;
+
+		switch (iInput)
+		{
+		case 1:
+			pShop = new CTier3Shop();
+			pShop->Initialize();
+			pShop->Update();
+
+
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			SAFE_DELETE(pShop);
+			return;
+		default:
+			std::cout << "잘못 누르셨습니다" << std::endl;
+			break;
 		}
 	}
 }

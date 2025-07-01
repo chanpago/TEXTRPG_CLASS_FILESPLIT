@@ -52,6 +52,27 @@
     <Filter Include="Enemy\헤네시스">
       <UniqueIdentifier>{b0deeaeb-6a1c-4335-8e45-1408138cba5a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="상점">
+      <UniqueIdentifier>{e799f4c2-8207-4e82-9d78-8cb58bbc337f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="상점\초급상점">
+      <UniqueIdentifier>{b638b35c-8b26-4871-bb4c-3192ffa862e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing">
+      <UniqueIdentifier>{968f530f-b1e8-4f05-8269-ca151d604f88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CWeapon">
+      <UniqueIdentifier>{024d8ea6-38a1-47ab-af81-f29aba7263af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CWeapon\초급무기">
+      <UniqueIdentifier>{67a102e8-aacb-4c4f-887b-3ce02d1b3bc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CArmor">
+      <UniqueIdentifier>{623bf21e-5056-4c54-8a1d-161a1b56f20e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CArmor\초급방어구">
+      <UniqueIdentifier>{b6d452de-7b82-450b-869b-8dac33229423}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="텍스트알피지(클래스).cpp">
@@ -104,6 +125,27 @@
     </ClCompile>
     <ClCompile Include="CEnemy_MushMom.cpp">
       <Filter>Enemy\헤네시스</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseShop.cpp">
+      <Filter>상점</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier3Shop.cpp">
+      <Filter>상점\초급상점</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseWeapon.cpp">
+      <Filter>CBaseThing\CWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier3Weapon.cpp">
+      <Filter>CBaseThing\CWeapon\초급무기</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseThing.cpp">
+      <Filter>CBaseThing</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseArmor.cpp">
+      <Filter>CBaseThing\CArmor</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier3Armor.cpp">
+      <Filter>CBaseThing\CArmor\초급방어구</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +205,27 @@
     </ClInclude>
     <ClInclude Include="CEnemy_MushMom.h">
       <Filter>Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseShop.h">
+      <Filter>상점</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier3Shop.h">
+      <Filter>상점\초급상점</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseWeapon.h">
+      <Filter>CBaseThing\CWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier3Weapon.h">
+      <Filter>CBaseThing\CWeapon\초급무기</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseThing.h">
+      <Filter>CBaseThing</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseArmor.h">
+      <Filter>CBaseThing\CArmor</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier3Armor.h">
+      <Filter>CBaseThing\CArmor\초급방어구</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

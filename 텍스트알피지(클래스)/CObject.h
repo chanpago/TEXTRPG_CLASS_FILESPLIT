@@ -34,7 +34,7 @@ public:
 	inline const int			GetObjectType() const		{ return m_pObject->iObjectType; }
 
 
-	virtual void		Die() const = 0;
+	virtual void				Die() const = 0;
 private:
 	OBJECTINFO*		m_pObject;
 };

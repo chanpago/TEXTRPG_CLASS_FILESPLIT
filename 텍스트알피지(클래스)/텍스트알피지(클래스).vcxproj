@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CBaseArmor.cpp" />
+    <ClCompile Include="CBaseThing.cpp" />
+    <ClCompile Include="CBaseWeapon.cpp" />
     <ClCompile Include="CEnemy_MushMom.cpp" />
     <ClCompile Include="CEnemy_RibbonPig.cpp" />
     <ClCompile Include="CMainGame.cpp" />
@@ -134,6 +137,10 @@
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CEnemy.cpp" />
     <ClCompile Include="CEnemy_Slime.cpp" />
+    <ClCompile Include="CBaseShop.cpp" />
+    <ClCompile Include="CTier3Shop.cpp" />
+    <ClCompile Include="CTier3Weapon.cpp" />
+    <ClCompile Include="CTier3Armor.cpp" />
     <ClCompile Include="M1_MagicClaw.cpp" />
     <ClCompile Include="MagicianSkill.cpp" />
     <ClCompile Include="pch.cpp" />
@@ -146,11 +153,18 @@
     <ClCompile Include="텍스트알피지(클래스).cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CBaseArmor.h" />
+    <ClInclude Include="CBaseThing.h" />
+    <ClInclude Include="CBaseWeapon.h" />
     <ClInclude Include="CEnemy_MushMom.h" />
     <ClInclude Include="CEnemy_RibbonPig.h" />
     <ClInclude Include="CMainGame.h" />
     <ClInclude Include="CObject.h" />
     <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CBaseShop.h" />
+    <ClInclude Include="CTier3Shop.h" />
+    <ClInclude Include="CTier3Weapon.h" />
+    <ClInclude Include="CTier3Armor.h" />
     <ClInclude Include="Define.h" />
     <ClInclude Include="CEnemy.h" />
     <ClInclude Include="CEnemy_Slime.h" />

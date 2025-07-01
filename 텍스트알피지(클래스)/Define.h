@@ -46,3 +46,22 @@ struct PLAYERINFO
 	int iLUK;
 
 };
+
+
+struct WEAPONINFO
+{
+	WEAPONINFO(int _iPrice, int _iTier, int _iType) : iPrice(_iPrice), iTier(_iTier), iType(_iType) {}
+
+	int iPrice;
+	int iTier;
+	int iType;
+};
+
+struct ARMORINFO
+{
+	ARMORINFO(int _iPrice, int _iTier, int _iType) : iPrice(_iPrice), iTier(_iTier), iType(_iType) {}
+
+	int iPrice;
+	int iTier;
+	int iType;
+};

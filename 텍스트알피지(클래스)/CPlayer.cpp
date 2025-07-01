@@ -89,7 +89,7 @@ void CPlayer::Render() const
 	std::cout << "Stat Point : " << m_pPlayerInfo->iStatPoint << std::endl;
 
 
-	std::cout << "==============" << GetObjectJob() << " 스킬" << "==============" << std::endl;
+	std::cout << "================" << GetObjectJob() << " 스킬" << "===============" << std::endl;
 
 	int i = 1;
 	for (auto skill : m_pPlayerInfo->pSkills->GetSkills())
