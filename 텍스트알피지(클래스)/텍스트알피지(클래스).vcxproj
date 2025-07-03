@@ -128,16 +128,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CBaseArmor.cpp" />
+    <ClCompile Include="CBaseInventory.cpp" />
+    <ClCompile Include="CBasePotion.cpp" />
     <ClCompile Include="CBaseThing.cpp" />
     <ClCompile Include="CBaseWeapon.cpp" />
+    <ClCompile Include="CBehave.cpp" />
+    <ClCompile Include="CBehave_Buy.cpp" />
+    <ClCompile Include="CBehave_ItemUse.cpp" />
     <ClCompile Include="CEnemy_MushMom.cpp" />
     <ClCompile Include="CEnemy_RibbonPig.cpp" />
+    <ClCompile Include="CEquipmentInventory.cpp" />
     <ClCompile Include="CMainGame.cpp" />
     <ClCompile Include="CObject.cpp" />
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CEnemy.cpp" />
     <ClCompile Include="CEnemy_Slime.cpp" />
     <ClCompile Include="CBaseShop.cpp" />
+    <ClCompile Include="CPlayerInventory.cpp" />
+    <ClCompile Include="CTier2Armor.cpp" />
+    <ClCompile Include="CTier2Potion.cpp" />
+    <ClCompile Include="CTier2Shop.cpp" />
+    <ClCompile Include="CTier2Weapon.cpp" />
+    <ClCompile Include="CTier3Potion.cpp" />
     <ClCompile Include="CTier3Shop.cpp" />
     <ClCompile Include="CTier3Weapon.cpp" />
     <ClCompile Include="CTier3Armor.cpp" />
@@ -154,14 +166,26 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CBaseArmor.h" />
+    <ClInclude Include="CBaseInventory.h" />
+    <ClInclude Include="CBasePotion.h" />
     <ClInclude Include="CBaseThing.h" />
     <ClInclude Include="CBaseWeapon.h" />
+    <ClInclude Include="CBehave.h" />
+    <ClInclude Include="CBehave_Buy.h" />
+    <ClInclude Include="CBehave_ItemUse.h" />
     <ClInclude Include="CEnemy_MushMom.h" />
     <ClInclude Include="CEnemy_RibbonPig.h" />
+    <ClInclude Include="CEquipmentInventory.h" />
     <ClInclude Include="CMainGame.h" />
     <ClInclude Include="CObject.h" />
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CBaseShop.h" />
+    <ClInclude Include="CPlayerInventory.h" />
+    <ClInclude Include="CTier2Armor.h" />
+    <ClInclude Include="CTier2Potion.h" />
+    <ClInclude Include="CTier2Shop.h" />
+    <ClInclude Include="CTier2Weapon.h" />
+    <ClInclude Include="CTier3Potion.h" />
     <ClInclude Include="CTier3Shop.h" />
     <ClInclude Include="CTier3Weapon.h" />
     <ClInclude Include="CTier3Armor.h" />

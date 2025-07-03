@@ -23,6 +23,12 @@ public:
 	{
 		return &m_pArmorInfo;
 	}
+
+	int GetType()const { return m_pArmorInfo->iType; }
+	int GetUniqueNum() const { return m_pArmorInfo->iUniqueNumber; }
+	int GetPrice()const { return m_pArmorInfo->iPrice; }
+	std::string GetName() const { return m_pArmorInfo->sName; }
+	int GetValue()const { return m_pArmorInfo->iArmorRate; }
 private:
 	ARMORINFO* m_pArmorInfo;
 

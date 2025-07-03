@@ -7,6 +7,9 @@
 #include "W0_BasicSkill.h"
 #include "Skill.h"
 
+#include "CPlayerInventory.h"
+#include "CEquipmentInventory.h"
+
 #include "pch_Skill.h"
 
 
@@ -33,16 +36,22 @@ bool CPlayer::Initialize()
 	case 전사:
 		SetObject("찬호", "전사", 전사);
 		SetPlayerInfo();
+		SetPlayerInven();
+		SetPlayerEquipInven();
 		CreateSkill(전사);
 		break;
 	case 마법사:
 		SetObject("찬호", "마법사", 마법사);
 		SetPlayerInfo();
+		SetPlayerInven();
+		SetPlayerEquipInven();
 		CreateSkill(마법사);
 		break;
 	case 도적:
 		SetObject("찬호", "도적", 도적);
 		SetPlayerInfo();
+		SetPlayerInven();
+		SetPlayerEquipInven();
 		CreateSkill(도적);
 		break;
 	case 불러오기:
@@ -78,6 +87,8 @@ void CPlayer::Release()
 	//SAFE_DELETE(*(GetObject()));
 	SAFE_DELETE(m_pPlayerInfo->pSkills);
 	SAFE_DELETE(m_pPlayerInfo);
+	SAFE_DELETE(m_pEquipmentInventory);
+	SAFE_DELETE(m_pPlayerInventory);
 }
 
 
@@ -97,6 +108,10 @@ void CPlayer::Render() const
 		std::cout << i++ << " : " << "[ " << skill->GetSkillName() << " ]" << std::endl;
 	}
 	std::cout << "========================================" << std::endl;
+	std::cout << std::endl;
+	std::cout << "소지금 : " << m_pPlayerInfo->iMoney << "메소" << std::endl;
+	m_pEquipmentInventory->Render();
+	m_pPlayerInventory->Render();
 }
 
 
@@ -165,6 +180,16 @@ void CPlayer::AddEXP(const int iNum)
 void CPlayer::SetPlayerInfo()
 {
 	m_pPlayerInfo = new PLAYERINFO;
+}
+
+void CPlayer::SetPlayerInven()
+{
+	m_pPlayerInventory = new CPlayerInventory;
+}
+
+void CPlayer::SetPlayerEquipInven()
+{
+	m_pEquipmentInventory = new CEquipmentInventory;
 }
 
 void CPlayer::LevelUP()
@@ -256,7 +281,7 @@ void CPlayer::CalcAttackValue()
 {
 	if (GetObjectType() == 전사)
 	{
-		(*GetObject())->iAttackValue = 10 + m_pPlayerInfo->iSTR;
+		(*GetObject())->iAttackValue = (*GetObject())->iAttackValue + m_pPlayerInfo->iSTR;
 		(*GetObject())->iMaxHealthValue = (*GetObject())->iLevel * 10 + m_pPlayerInfo->iSTR * 10;
 	}
 	if (GetObjectType() == 도적)

@@ -31,7 +31,7 @@ struct OBJECTINFO
 struct PLAYERINFO
 {
 	PLAYERINFO() : pSkills(nullptr),
-		iStatPoint(0), iSTR(4), iDEX(4), iINT(4), iLUK(4) {}
+		iStatPoint(0), iSTR(4), iDEX(4), iINT(4), iLUK(4), iMoney(2000) {}
 
 
 
@@ -45,23 +45,65 @@ struct PLAYERINFO
 	int iINT;
 	int iLUK;
 
+	int iMoney;
+
 };
 
 
-struct WEAPONINFO
+enum THINGTYPE
 {
-	WEAPONINFO(int _iPrice, int _iTier, int _iType) : iPrice(_iPrice), iTier(_iTier), iType(_iType) {}
-
-	int iPrice;
-	int iTier;
-	int iType;
+	장비 = 1,
+	소비,
+	기타
 };
 
-struct ARMORINFO
+struct WEAPONINFO 
 {
-	ARMORINFO(int _iPrice, int _iTier, int _iType) : iPrice(_iPrice), iTier(_iTier), iType(_iType) {}
+	// 이름, 가격, 등급, 타입, 공격량, 고유번호
+	WEAPONINFO(std:: string _sName, int _iPrice, int _iTier, int _iType, int _iAttackValue, int _iUniqueNumber) : sName(_sName), iPrice(_iPrice), iTier(_iTier), iType(_iType), iAttackValue(_iAttackValue), iUniqueNumber(_iUniqueNumber) {}
 
+	std::string sName;
 	int iPrice;
 	int iTier;
 	int iType;
+	int iAttackValue;
+
+	const int iUniqueNumber;
+};
+
+struct ARMORINFO 
+{
+	// 이름, 가격, 등급, 타입, 아머량, 고유번호
+	ARMORINFO(std::string _sName, int _iPrice, int _iTier, int _iType, int _iArmorRate, int _iUniqueNumber) : sName(_sName), iPrice(_iPrice), iTier(_iTier), iType(_iType), iArmorRate(_iArmorRate), iUniqueNumber(_iUniqueNumber) {}
+
+	std::string sName;
+	int iPrice;
+	int iTier;
+	int iType;
+	int iArmorRate;
+
+	const int iUniqueNumber;
+};
+
+struct POTIONINFO
+{
+	// 이름, 가격, 등급, 타입, 회복량, 고유번호
+	POTIONINFO(std::string _sName, int _iPrice, int _iTier, int _iType, int _iValue, int _iUniqueNumber) : sName(_sName), iPrice(_iPrice), iTier(_iTier), iType(_iType), iValue(_iValue), iUniqueNumber(_iUniqueNumber){}
+
+	POTIONINFO(const POTIONINFO& potion)
+	{
+		sName = potion.sName;
+		iPrice = potion.iPrice;
+		iTier = potion.iTier;
+		iType = potion.iType;
+		iValue = potion.iValue;
+	}
+
+	std::string sName;
+	int iPrice;
+	int iTier;
+	int iType;
+	int iValue;
+
+	int iUniqueNumber;
 };

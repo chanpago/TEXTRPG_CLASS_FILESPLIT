@@ -1,23 +1,37 @@
 #include "pch.h"
 #include "CMainGame.h"
+#include "CPlayer.h"
 #include "W0_BasicSkill.h"
 #include "CTier3Shop.h"
+#include "CTier2Shop.h"
+#include "CBehave.h"
+#include "CBehave_ItemUse.h"
 
-CMainGame::CMainGame(): m_pPlayer(nullptr) {}
+CMainGame::CMainGame(): m_pPlayer(nullptr), Behave_UseItem(nullptr){}
 
 CMainGame::~CMainGame()
 {
 	Release();
 }
+
+void CMainGame::Release()
+{
+	SAFE_DELETE(Behave_UseItem);
+	SAFE_DELETE(m_pPlayer);
+}
 																																			   
 bool CMainGame::Initialize()
 {
+	Behave_UseItem = new CBehave_ItemUse;
+
+
 	//여기에 플레이어 생성하는 함수 들어가야 할듯
 	if (!m_pPlayer)
 	{
 		m_pPlayer = new CPlayer;
 		return m_pPlayer->Initialize();
 	}
+	
 }
 
 void CMainGame::Update()
@@ -30,7 +44,7 @@ void CMainGame::Update()
 
 		// 플레이어 정보 출력함수
 		m_pPlayer->Render();
-		std::cout << "1. 사냥터 2. 상점 3. 종료 : ";
+		std::cout << "1. 사냥터 2. 상점 3. 아이템 사용 4. 종료 : ";
 		std::cin >> iInput;
 
 		switch (iInput)
@@ -42,6 +56,9 @@ void CMainGame::Update()
 			Shop();
 			break;
 		case 3:
+			Behave_UseItem->UseItem(m_pPlayer);
+			break;
+		case 4:
 			return;
 		default:
 			std::cout << "잘못 누르셨습니다" << std::endl;
@@ -53,11 +70,6 @@ void CMainGame::Update()
 	
 }
 
-void CMainGame::Release()
-{
-	// player가 delete될 때 player의 소멸자가 호출됨
-	SAFE_DELETE(m_pPlayer);
-}
 
 void CMainGame::Field()
 {
@@ -183,7 +195,11 @@ void CMainGame::Shop()
 
 	while (true)
 	{
+		SAFE_DELETE(pShop);
+
+
 		system("cls");
+		m_pPlayer->Render();
 		//std::cout << "========================================" << std::endl;
 		std::cout << "1. 초급상점 2. 중급상점 3. 고급상점 4.나가기: ";
 		std::cin >> iInput;
@@ -193,11 +209,14 @@ void CMainGame::Shop()
 		case 1:
 			pShop = new CTier3Shop();
 			pShop->Initialize();
-			pShop->Update();
+			pShop->Update(m_pPlayer);
 
 
 			break;
 		case 2:
+			pShop = new CTier2Shop();
+			pShop->Initialize();
+			pShop->Update(m_pPlayer);
 			break;
 		case 3:
 			break;

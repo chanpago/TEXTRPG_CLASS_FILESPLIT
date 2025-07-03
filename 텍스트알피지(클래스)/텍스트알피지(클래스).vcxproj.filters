@@ -22,35 +22,8 @@
     <Filter Include="Object">
       <UniqueIdentifier>{06be3065-7400-44e4-ac22-696e0de19656}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Player">
-      <UniqueIdentifier>{608ec2db-4f14-4aa1-9f17-a21bff46551a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="전사스킬">
-      <UniqueIdentifier>{249ed986-f381-455e-8678-c9bcb2687251}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="전사스킬\1차스킬">
-      <UniqueIdentifier>{040fe066-3c46-42b6-b15d-323d4d05b7d1}</UniqueIdentifier>
-    </Filter>
     <Filter Include="통합스킬">
       <UniqueIdentifier>{00abe3fb-712c-4669-a520-909d923982b8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="마법사스킬">
-      <UniqueIdentifier>{7a8a230b-11e4-4ad9-871a-9f90c4c0a6b4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="마법사스킬\1차스킬">
-      <UniqueIdentifier>{03d30463-25dd-4da4-97ba-706c1917abd1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="도적스킬">
-      <UniqueIdentifier>{4ef2d053-8b47-480a-a8d3-ee09b4815773}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="도적스킬\1차스킬">
-      <UniqueIdentifier>{5f4a8686-0b75-485a-ad64-70643b3f7f1e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Enemy">
-      <UniqueIdentifier>{e43faec5-aad1-4531-8538-cc8d40abd507}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Enemy\헤네시스">
-      <UniqueIdentifier>{b0deeaeb-6a1c-4335-8e45-1408138cba5a}</UniqueIdentifier>
     </Filter>
     <Filter Include="상점">
       <UniqueIdentifier>{e799f4c2-8207-4e82-9d78-8cb58bbc337f}</UniqueIdentifier>
@@ -73,6 +46,69 @@
     <Filter Include="CBaseThing\CArmor\초급방어구">
       <UniqueIdentifier>{b6d452de-7b82-450b-869b-8dac33229423}</UniqueIdentifier>
     </Filter>
+    <Filter Include="통합스킬\전사스킬">
+      <UniqueIdentifier>{249ed986-f381-455e-8678-c9bcb2687251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬\전사스킬\1차스킬">
+      <UniqueIdentifier>{040fe066-3c46-42b6-b15d-323d4d05b7d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬\마법사스킬">
+      <UniqueIdentifier>{7a8a230b-11e4-4ad9-871a-9f90c4c0a6b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬\마법사스킬\1차스킬">
+      <UniqueIdentifier>{03d30463-25dd-4da4-97ba-706c1917abd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬\도적스킬">
+      <UniqueIdentifier>{4ef2d053-8b47-480a-a8d3-ee09b4815773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="통합스킬\도적스킬\1차스킬">
+      <UniqueIdentifier>{5f4a8686-0b75-485a-ad64-70643b3f7f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Player">
+      <UniqueIdentifier>{608ec2db-4f14-4aa1-9f17-a21bff46551a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy">
+      <UniqueIdentifier>{e43faec5-aad1-4531-8538-cc8d40abd507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Enemy\헤네시스">
+      <UniqueIdentifier>{b0deeaeb-6a1c-4335-8e45-1408138cba5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CInventory">
+      <UniqueIdentifier>{6b9e56d7-5ee2-41ae-a28b-a64be888b5c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CPotion">
+      <UniqueIdentifier>{f8a70e19-76b2-43fa-b3ec-55f0981c7999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CPotion\초급포션">
+      <UniqueIdentifier>{0c30d889-7983-4562-9c8e-ec8306c4f1c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave">
+      <UniqueIdentifier>{e51bdce5-724d-4fa8-80a7-34d630eaaf4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave\CBuy">
+      <UniqueIdentifier>{81a22274-b493-4345-b826-c9857210d449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave\CUseItem">
+      <UniqueIdentifier>{f882e200-0718-4301-8da8-b591a3203b50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CInventory\아이템 인벤토리">
+      <UniqueIdentifier>{2fca397c-c362-4890-beed-ff268ee607d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CInventory\장비 인벤토리">
+      <UniqueIdentifier>{beb62ca7-b452-469c-8599-d8a621155de9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CWeapon\중급무기">
+      <UniqueIdentifier>{35830ab9-c9db-40cd-87ab-eaa9d683964e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CArmor\중급방어구">
+      <UniqueIdentifier>{12910de3-8cda-4345-8bfd-0527f9e09c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBaseThing\CPotion\중급포션">
+      <UniqueIdentifier>{fe51c03c-cf21-45e0-a312-baa64bd21192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="상점\중급상점">
+      <UniqueIdentifier>{3a3828bf-ef67-480e-9f62-27d868dd0d19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="텍스트알피지(클래스).cpp">
@@ -88,43 +124,43 @@
       <Filter>Object</Filter>
     </ClCompile>
     <ClCompile Include="CPlayer.cpp">
-      <Filter>Player</Filter>
+      <Filter>Object\Player</Filter>
     </ClCompile>
     <ClCompile Include="WarriorSkill.cpp">
-      <Filter>전사스킬</Filter>
+      <Filter>통합스킬\전사스킬</Filter>
     </ClCompile>
     <ClCompile Include="W1_PowerStrike.cpp">
-      <Filter>전사스킬\1차스킬</Filter>
+      <Filter>통합스킬\전사스킬\1차스킬</Filter>
     </ClCompile>
     <ClCompile Include="W0_BasicSkill.cpp">
       <Filter>통합스킬</Filter>
     </ClCompile>
     <ClCompile Include="M1_MagicClaw.cpp">
-      <Filter>마법사스킬\1차스킬</Filter>
+      <Filter>통합스킬\마법사스킬\1차스킬</Filter>
     </ClCompile>
     <ClCompile Include="MagicianSkill.cpp">
-      <Filter>마법사스킬</Filter>
+      <Filter>통합스킬\마법사스킬</Filter>
     </ClCompile>
     <ClCompile Include="Skill.cpp">
       <Filter>통합스킬</Filter>
     </ClCompile>
     <ClCompile Include="ThiefSkill.cpp">
-      <Filter>도적스킬</Filter>
+      <Filter>통합스킬\도적스킬</Filter>
     </ClCompile>
     <ClCompile Include="T1_LuckySeven.cpp">
-      <Filter>도적스킬\1차스킬</Filter>
+      <Filter>통합스킬\도적스킬\1차스킬</Filter>
     </ClCompile>
     <ClCompile Include="CEnemy.cpp">
-      <Filter>Enemy</Filter>
+      <Filter>Object\Enemy</Filter>
     </ClCompile>
     <ClCompile Include="CEnemy_Slime.cpp">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClCompile>
     <ClCompile Include="CEnemy_RibbonPig.cpp">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClCompile>
     <ClCompile Include="CEnemy_MushMom.cpp">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClCompile>
     <ClCompile Include="CBaseShop.cpp">
       <Filter>상점</Filter>
@@ -147,6 +183,42 @@
     <ClCompile Include="CTier3Armor.cpp">
       <Filter>CBaseThing\CArmor\초급방어구</Filter>
     </ClCompile>
+    <ClCompile Include="CBasePotion.cpp">
+      <Filter>CBaseThing\CPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier3Potion.cpp">
+      <Filter>CBaseThing\CPotion\초급포션</Filter>
+    </ClCompile>
+    <ClCompile Include="CBehave_Buy.cpp">
+      <Filter>CBehave\CBuy</Filter>
+    </ClCompile>
+    <ClCompile Include="CBehave.cpp">
+      <Filter>CBehave</Filter>
+    </ClCompile>
+    <ClCompile Include="CBehave_ItemUse.cpp">
+      <Filter>CBehave\CUseItem</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseInventory.cpp">
+      <Filter>CInventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerInventory.cpp">
+      <Filter>CInventory\아이템 인벤토리</Filter>
+    </ClCompile>
+    <ClCompile Include="CEquipmentInventory.cpp">
+      <Filter>CInventory\장비 인벤토리</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier2Weapon.cpp">
+      <Filter>CBaseThing\CWeapon\중급무기</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier2Armor.cpp">
+      <Filter>CBaseThing\CArmor\중급방어구</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier2Potion.cpp">
+      <Filter>CBaseThing\CPotion\중급포션</Filter>
+    </ClCompile>
+    <ClCompile Include="CTier2Shop.cpp">
+      <Filter>상점\중급상점</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -162,49 +234,49 @@
       <Filter>Object</Filter>
     </ClInclude>
     <ClInclude Include="CPlayer.h">
-      <Filter>Player</Filter>
+      <Filter>Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="WarriorSkill.h">
-      <Filter>전사스킬</Filter>
+      <Filter>통합스킬\전사스킬</Filter>
     </ClInclude>
     <ClInclude Include="W1_PowerStrike.h">
-      <Filter>전사스킬\1차스킬</Filter>
+      <Filter>통합스킬\전사스킬\1차스킬</Filter>
     </ClInclude>
     <ClInclude Include="W0_BasicSkill.h">
       <Filter>통합스킬</Filter>
     </ClInclude>
     <ClInclude Include="MagicianSkill.h">
-      <Filter>마법사스킬</Filter>
+      <Filter>통합스킬\마법사스킬</Filter>
     </ClInclude>
     <ClInclude Include="Skill.h">
       <Filter>통합스킬</Filter>
     </ClInclude>
     <ClInclude Include="M1_MagicClaw.h">
-      <Filter>마법사스킬</Filter>
+      <Filter>통합스킬\마법사스킬</Filter>
     </ClInclude>
     <ClInclude Include="ThiefSkill.h">
-      <Filter>도적스킬</Filter>
+      <Filter>통합스킬\도적스킬</Filter>
     </ClInclude>
     <ClInclude Include="T1_LuckySeven.h">
-      <Filter>도적스킬\1차스킬</Filter>
+      <Filter>통합스킬\도적스킬\1차스킬</Filter>
     </ClInclude>
     <ClInclude Include="pch_Skill.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CEnemy.h">
-      <Filter>Enemy</Filter>
+      <Filter>Object\Enemy</Filter>
     </ClInclude>
     <ClInclude Include="CEnemy_Slime.h">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClInclude>
     <ClInclude Include="CEnemy_RibbonPig.h">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClInclude>
     <ClInclude Include="pch_Monster.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CEnemy_MushMom.h">
-      <Filter>Enemy\헤네시스</Filter>
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClInclude>
     <ClInclude Include="CBaseShop.h">
       <Filter>상점</Filter>
@@ -226,6 +298,42 @@
     </ClInclude>
     <ClInclude Include="CTier3Armor.h">
       <Filter>CBaseThing\CArmor\초급방어구</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasePotion.h">
+      <Filter>CBaseThing\CPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier3Potion.h">
+      <Filter>CBaseThing\CPotion\초급포션</Filter>
+    </ClInclude>
+    <ClInclude Include="CBehave_Buy.h">
+      <Filter>CBehave\CBuy</Filter>
+    </ClInclude>
+    <ClInclude Include="CBehave.h">
+      <Filter>CBehave</Filter>
+    </ClInclude>
+    <ClInclude Include="CBehave_ItemUse.h">
+      <Filter>CBehave\CUseItem</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseInventory.h">
+      <Filter>CInventory</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerInventory.h">
+      <Filter>CInventory\아이템 인벤토리</Filter>
+    </ClInclude>
+    <ClInclude Include="CEquipmentInventory.h">
+      <Filter>CInventory\장비 인벤토리</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier2Weapon.h">
+      <Filter>CBaseThing\CWeapon\중급무기</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier2Armor.h">
+      <Filter>CBaseThing\CArmor\중급방어구</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier2Potion.h">
+      <Filter>CBaseThing\CPotion\중급포션</Filter>
+    </ClInclude>
+    <ClInclude Include="CTier2Shop.h">
+      <Filter>상점\중급상점</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

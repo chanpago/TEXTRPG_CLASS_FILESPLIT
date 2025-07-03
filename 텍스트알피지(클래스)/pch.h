@@ -5,7 +5,8 @@
 #include <string>
 #include <fstream>
 #include <vector>
-
+#include <set>
+#include <unordered_map>
 
 
 #define		SAFE_DELETE(p)		 if(p) { delete p; p = nullptr;}

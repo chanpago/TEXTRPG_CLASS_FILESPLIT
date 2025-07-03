@@ -1,8 +1,11 @@
 #pragma once
 #include "pch.h"
 #include "pch_Monster.h"
-#include "CPlayer.h"
 
+
+
+class CPlayer;
+class CBehave_ItemUse;
 
 class CMainGame
 {
@@ -24,6 +27,6 @@ public:
 	void		SkillAttack(CPlayer* pPlayer, CObject* pEnemy);
 private:
 	CPlayer*		m_pPlayer;
-
+	CBehave_ItemUse*		Behave_UseItem;
 };
 

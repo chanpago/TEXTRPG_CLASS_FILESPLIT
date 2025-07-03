@@ -1,25 +1,26 @@
+#include "CTier2Shop.h"
+
 #include "CBaseThing.h"
-#include "CTier3Shop.h"
-#include "CTier3Weapon.h"
-#include "CTier3Armor.h"
-#include "CTier3Potion.h"
+#include "CTier2Weapon.h"
+#include "CTier2Armor.h"
+#include "CTier2Potion.h"
 #include "CBehave_Buy.h"
 #include "CPlayer.h"
 
-CTier3Shop::CTier3Shop() : BuyItem(nullptr)
+CTier2Shop::CTier2Shop() : BuyItem(nullptr)
 {
 }
 
-CTier3Shop::~CTier3Shop()
+CTier2Shop::~CTier2Shop()
 {
 	Release();
 }
 
-void CTier3Shop::Initialize()
+void CTier2Shop::Initialize()
 {
-	ItemList.insert(std::make_pair(new CTier3Weapon, 1));
-	ItemList.insert(std::make_pair(new CTier3Armor, 1));
-	ItemList.insert(std::make_pair(new CTier3Potion, 10));
+	ItemList.insert(std::make_pair(new CTier2Weapon, 1));
+	ItemList.insert(std::make_pair(new CTier2Armor, 1));
+	ItemList.insert(std::make_pair(new CTier2Potion, 10));
 
 	for (auto Item : ItemList)
 	{
@@ -27,10 +28,9 @@ void CTier3Shop::Initialize()
 	}
 
 	BuyItem = new CBehave_Buy;
-
 }
 
-void CTier3Shop::Update(CPlayer* player)
+void CTier2Shop::Update(CPlayer* player)
 {
 	int iInput(0);
 	int ItemListSize = ItemList.size();
@@ -41,7 +41,7 @@ void CTier3Shop::Update(CPlayer* player)
 		player->Render();
 		std::cout << std::endl;
 		std::cout << std::endl;
-		std::cout << "=================초급상점===============" << std::endl;
+		std::cout << "=================중급상점===============" << std::endl;
 		Render();
 		std::cout << "몇번째 물품을 사시겠습니까? (0. 나가기) : ";
 		std::cin >> iInput;
@@ -71,13 +71,12 @@ void CTier3Shop::Update(CPlayer* player)
 	}
 }
 
-void CTier3Shop::Release()
+void CTier2Shop::Release()
 {
-	
 	SAFE_DELETE(BuyItem);
 }
 
-void CTier3Shop::Render()
+void CTier2Shop::Render()
 {
 	int iNum = 1;
 	for (auto Item : ItemList)
@@ -86,3 +85,5 @@ void CTier3Shop::Render()
 		Item.first->Render();
 	}
 }
+
+

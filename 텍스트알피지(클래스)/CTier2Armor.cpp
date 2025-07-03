@@ -1,24 +1,24 @@
-#include "CTier3Armor.h"
+#include "CTier2Armor.h"
 
-CTier3Armor::CTier3Armor()
+CTier2Armor::CTier2Armor()
 {
 }
 
-CTier3Armor::~CTier3Armor()
+CTier2Armor::~CTier2Armor()
 {
 }
 
-void CTier3Armor::Initialize()
+void CTier2Armor::Initialize()
 {
 	// 이름, 가격, 등급, 타입, 아머량, 고유번호
-	SetArmor(new ARMORINFO("초급 방어구", 500, 3, 2, 10, 20));
+	SetArmor(new ARMORINFO("중급 방어구", 1000, 2, 2, 30, 21));
 }
 
-void CTier3Armor::Update()
+void CTier2Armor::Update()
 {
 }
 
-void CTier3Armor::Render()
+void CTier2Armor::Render()
 {
 	std::cout << "========================================" << std::endl;
 	std::cout << "이름 : " << (*GetArmorInfo())->sName << std::endl;

@@ -1,4 +1,6 @@
 #pragma once
+#include "pch.h"
+
 class CBaseThing
 {
 public:
@@ -11,5 +13,14 @@ public:
 	virtual void Release() = 0;
 
 	virtual void Render() = 0;
+
+	virtual int GetType() const  = 0;
+
+	virtual int GetUniqueNum() const = 0;
+
+	virtual int GetPrice() const = 0;
+
+	virtual std::string GetName() const = 0;
+	virtual int GetValue() const = 0;
 };
 

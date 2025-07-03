@@ -6,13 +6,13 @@ class CBaseThing;
 class CBehave_Buy;
 class CPlayer;
 
-class CTier3Shop : public CBaseShop
+class CTier2Shop : public CBaseShop
 {
 public:
 
-	CTier3Shop();
-	~CTier3Shop();
-
+	CTier2Shop();
+	~CTier2Shop();
+	
 public:
 	void Initialize();
 	void Update(CPlayer* player);
@@ -22,7 +22,7 @@ public:
 
 
 private:
-	std::unordered_map<std::shared_ptr<CBaseThing>,int> ItemList;
+	std::unordered_map<std::shared_ptr<CBaseThing>, int> ItemList;
 	CBehave_Buy* BuyItem;
 };
 

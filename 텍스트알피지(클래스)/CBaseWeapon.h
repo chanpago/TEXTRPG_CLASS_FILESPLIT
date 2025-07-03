@@ -24,7 +24,11 @@ public:
 	{
 		return &m_pWeaponInfo;
 	}
-
+	int GetType()const { return m_pWeaponInfo->iType; }
+	int GetUniqueNum() const { return m_pWeaponInfo->iUniqueNumber; }
+	int GetPrice()const { return m_pWeaponInfo->iPrice; }
+	std::string GetName() const { return m_pWeaponInfo->sName; }
+	int GetValue()const { return m_pWeaponInfo->iAttackValue; }
 private:
 	WEAPONINFO* m_pWeaponInfo;
 };

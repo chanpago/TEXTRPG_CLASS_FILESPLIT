@@ -7,7 +7,6 @@ CBaseWeapon::CBaseWeapon() : m_pWeaponInfo(nullptr)
 
 CBaseWeapon::~CBaseWeapon()
 {
-	std::cout << "베이스 무기 소멸" << std::endl;
 	Release();
 }
 

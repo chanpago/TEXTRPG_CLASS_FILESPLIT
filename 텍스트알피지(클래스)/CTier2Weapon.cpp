@@ -1,26 +1,24 @@
-#include "CTier3Weapon.h"
+#include "CTier2Weapon.h"
 
-CTier3Weapon::CTier3Weapon()
+CTier2Weapon::CTier2Weapon()
 {
 }
 
-CTier3Weapon::~CTier3Weapon()
+CTier2Weapon::~CTier2Weapon()
 {
-
 }
 
-void CTier3Weapon::Initialize()
+void CTier2Weapon::Initialize()
 {
 	// 이름, 가격, 등급, 타입, 공격량, 고유번호
-	SetWeapon(new WEAPONINFO("초급 무기", 500, 3, 1, 10, 10));
+	SetWeapon(new WEAPONINFO("중급 무기", 1000, 2, 1, 20, 11));
 }
 
-void CTier3Weapon::Update()
+void CTier2Weapon::Update()
 {
-
 }
 
-void CTier3Weapon::Render()
+void CTier2Weapon::Render()
 {
 	std::cout << "========================================" << std::endl;
 	std::cout << "이름 : " << (*GetWeaponInfo())->sName << std::endl;

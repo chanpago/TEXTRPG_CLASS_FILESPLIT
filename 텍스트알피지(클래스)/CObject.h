@@ -26,6 +26,7 @@ public:
 	inline void					SetObjectHP(int iHPValue)   { m_pObject->iHealthValue = iHPValue; }
 	inline const int			GetObjectHP()const			{ return m_pObject->iHealthValue; }
 
+	inline void					SetObjectATK(const int ATKValue) { m_pObject->iAttackValue = ATKValue; }
 	inline const int			GetObjectATK() const		{ return m_pObject->iAttackValue; }
 	inline const std::string	GetObjectJob() const		{ return m_pObject->sJob; }
 	
