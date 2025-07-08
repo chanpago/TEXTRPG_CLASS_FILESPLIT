@@ -1,11 +1,11 @@
 #include "pch.h"
 #include "CMainGame.h"
-#include "CPlayer.h"
+#include "Player/CPlayer.h"
 #include "W0_BasicSkill.h"
 #include "CTier3Shop.h"
 #include "CTier2Shop.h"
 #include "CBehave.h"
-#include "CBehave_ItemUse.h"
+#include "ItemUse/CBehave_ItemUse.h"
 
 CMainGame::CMainGame(): m_pPlayer(nullptr), Behave_UseItem(nullptr){}
 

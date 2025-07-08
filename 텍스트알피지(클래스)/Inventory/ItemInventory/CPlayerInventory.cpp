@@ -17,6 +17,9 @@ void CPlayerInventory::Update()
 {
 }
 
+
+
+
 // 인벤토리 들어올 때
 // 나갈때도 오버로딩 필요
 void CPlayerInventory::Update(std::shared_ptr<CBaseThing> CItem, const int iItemtype, const int iUniqueNum)

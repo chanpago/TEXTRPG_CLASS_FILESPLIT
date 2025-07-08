@@ -25,6 +25,13 @@ public:
 	void		Fight(CPlayer* pPlayer, CObject* pEnemy);
 	void		Shop();
 	void		SkillAttack(CPlayer* pPlayer, CObject* pEnemy);
+
+
+// 메인게임 복사금지
+private:
+	CMainGame(const CMainGame&);
+	CMainGame& operator=(const CMainGame&);
+
 private:
 	CPlayer*		m_pPlayer;
 	CBehave_ItemUse*		Behave_UseItem;

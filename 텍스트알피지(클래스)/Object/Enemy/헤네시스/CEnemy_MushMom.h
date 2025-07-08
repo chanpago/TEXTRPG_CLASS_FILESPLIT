@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-#include "CEnemy.h"
+#include "Enemy/CEnemy.h"
 
 class CEnemy_MushMom : public CEnemy
 {

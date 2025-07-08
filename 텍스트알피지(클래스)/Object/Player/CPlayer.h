@@ -8,6 +8,9 @@ class W0_BasicSkill;
 class CPlayerInventory;
 class CEquipmentInventory;
 
+
+
+
 class CPlayer : public CObject
 {
 public:
@@ -71,6 +74,11 @@ public:
 
 	void						AddStat(const int iType);
 	void						CalcAttackValue();
+
+private:
+	CPlayer(const CPlayer&);
+	CPlayer& operator=(const CPlayer&);
+
 private:
 	PLAYERINFO* m_pPlayerInfo;
 	CEquipmentInventory* m_pEquipmentInventory;

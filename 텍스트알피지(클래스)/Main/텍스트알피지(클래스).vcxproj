@@ -104,7 +104,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Header;$(ProjectDir)BaseThing;$(ProjectDir)Behave;$(ProjectDir)GameManager;$(ProjectDir)Inventory;$(ProjectDir)Object;$(ProjectDir)shop;$(ProjectDir)Skills;$(ProjectDir)Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,85 +127,82 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BaseThing\CBaseThing.cpp" />
-    <ClCompile Include="BaseThing\무기\CBaseWeapon.cpp" />
-    <ClCompile Include="BaseThing\무기\CTier2Weapon.cpp" />
-    <ClCompile Include="BaseThing\무기\CTier3Weapon.cpp" />
-    <ClCompile Include="BaseThing\방어구\CBaseArmor.cpp" />
-    <ClCompile Include="BaseThing\방어구\CTier2Armor.cpp" />
-    <ClCompile Include="BaseThing\방어구\CTier3Armor.cpp" />
-    <ClCompile Include="BaseThing\포션\CBasePotion.cpp" />
-    <ClCompile Include="BaseThing\포션\CTier2Potion.cpp" />
-    <ClCompile Include="BaseThing\포션\CTier3Potion.cpp" />
-    <ClCompile Include="Behave\Buy\CBehave_Buy.cpp" />
-    <ClCompile Include="Behave\CBehave.cpp" />
-    <ClCompile Include="Behave\ItemUse\CBehave_ItemUse.cpp" />
-    <ClCompile Include="GameManager\CMainGame.cpp" />
-    <ClCompile Include="Inventory\CBaseInventory.cpp" />
-    <ClCompile Include="Inventory\EquipmentInventory\CEquipmentInventory.cpp" />
-    <ClCompile Include="Inventory\ItemInventory\CPlayerInventory.cpp" />
-    <ClCompile Include="Main\텍스트알피지(클래스).cpp" />
-    <ClCompile Include="Object\CObject.cpp" />
-    <ClCompile Include="Object\Enemy\CEnemy.cpp" />
-    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_MushMom.cpp" />
-    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_RibbonPig.cpp" />
-    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_Slime.cpp" />
-    <ClCompile Include="Object\Player\CPlayer.cpp" />
-    <ClCompile Include="shop\CBaseShop.cpp" />
-    <ClCompile Include="shop\CTier2Shop.cpp" />
-    <ClCompile Include="shop\CTier3Shop.cpp" />
-    <ClCompile Include="Skills\Skill.cpp" />
-    <ClCompile Include="Skills\W0_BasicSkill.cpp" />
-    <ClCompile Include="Skills\도적스킬\1차스킬\T1_LuckySeven.cpp" />
-    <ClCompile Include="Skills\도적스킬\ThiefSkill.cpp" />
-    <ClCompile Include="Skills\마법사스킬\1차스킬\M1_MagicClaw.cpp" />
-    <ClCompile Include="Skills\마법사스킬\MagicianSkill.cpp" />
-    <ClCompile Include="Skills\전사스킬\1차스킬\W1_PowerStrike.cpp" />
-    <ClCompile Include="Skills\전사스킬\WarriorSkill.cpp" />
-    <ClCompile Include="Source\pch.cpp" />
+    <ClCompile Include="CBaseArmor.cpp" />
+    <ClCompile Include="CBaseInventory.cpp" />
+    <ClCompile Include="CBasePotion.cpp" />
+    <ClCompile Include="CBaseThing.cpp" />
+    <ClCompile Include="CBaseWeapon.cpp" />
+    <ClCompile Include="CBehave.cpp" />
+    <ClCompile Include="CBehave_Buy.cpp" />
+    <ClCompile Include="CBehave_ItemUse.cpp" />
+    <ClCompile Include="CEnemy_MushMom.cpp" />
+    <ClCompile Include="CEnemy_RibbonPig.cpp" />
+    <ClCompile Include="CEquipmentInventory.cpp" />
+    <ClCompile Include="CMainGame.cpp" />
+    <ClCompile Include="CObject.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CEnemy.cpp" />
+    <ClCompile Include="CEnemy_Slime.cpp" />
+    <ClCompile Include="CBaseShop.cpp" />
+    <ClCompile Include="CPlayerInventory.cpp" />
+    <ClCompile Include="CTier2Armor.cpp" />
+    <ClCompile Include="CTier2Potion.cpp" />
+    <ClCompile Include="CTier2Shop.cpp" />
+    <ClCompile Include="CTier2Weapon.cpp" />
+    <ClCompile Include="CTier3Potion.cpp" />
+    <ClCompile Include="CTier3Shop.cpp" />
+    <ClCompile Include="CTier3Weapon.cpp" />
+    <ClCompile Include="CTier3Armor.cpp" />
+    <ClCompile Include="M1_MagicClaw.cpp" />
+    <ClCompile Include="MagicianSkill.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="T1_LuckySeven.cpp" />
+    <ClCompile Include="ThiefSkill.cpp" />
+    <ClCompile Include="W0_BasicSkill.cpp" />
+    <ClCompile Include="W1_PowerStrike.cpp" />
+    <ClCompile Include="WarriorSkill.cpp" />
+    <ClCompile Include="텍스트알피지(클래스).cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseThing\CBaseThing.h" />
-    <ClInclude Include="BaseThing\무기\CBaseWeapon.h" />
-    <ClInclude Include="BaseThing\무기\CTier2Weapon.h" />
-    <ClInclude Include="BaseThing\무기\CTier3Weapon.h" />
-    <ClInclude Include="BaseThing\방어구\CBaseArmor.h" />
-    <ClInclude Include="BaseThing\방어구\CTier2Armor.h" />
-    <ClInclude Include="BaseThing\방어구\CTier3Armor.h" />
-    <ClInclude Include="BaseThing\포션\CBasePotion.h" />
-    <ClInclude Include="BaseThing\포션\CTier2Potion.h" />
-    <ClInclude Include="BaseThing\포션\CTier3Potion.h" />
-    <ClInclude Include="Behave\Buy\CBehave_Buy.h" />
-    <ClInclude Include="Behave\CBehave.h" />
-    <ClInclude Include="Behave\ItemUse\CBehave_ItemUse.h" />
-    <ClInclude Include="GameManager\CMainGame.h" />
-    <ClInclude Include="Header\Define.h" />
-    <ClInclude Include="Header\pch.h" />
-    <ClInclude Include="Header\pch_Monster.h" />
-    <ClInclude Include="Header\pch_Skill.h" />
-    <ClInclude Include="Inventory\CBaseInventory.h" />
-    <ClInclude Include="Inventory\EquipmentInventory\CEquipmentInventory.h" />
-    <ClInclude Include="Inventory\ItemInventory\CPlayerInventory.h" />
-    <ClInclude Include="Object\CObject.h" />
-    <ClInclude Include="Object\Enemy\CEnemy.h" />
-    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_MushMom.h" />
-    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_RibbonPig.h" />
-    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_Slime.h" />
-    <ClInclude Include="Object\Player\CPlayer.h" />
-    <ClInclude Include="shop\CBaseShop.h" />
-    <ClInclude Include="shop\CTier2Shop.h" />
-    <ClInclude Include="shop\CTier3Shop.h" />
-    <ClInclude Include="Skills\Skill.h" />
-    <ClInclude Include="Skills\W0_BasicSkill.h" />
-    <ClInclude Include="Skills\도적스킬\1차스킬\T1_LuckySeven.h" />
-    <ClInclude Include="Skills\도적스킬\ThiefSkill.h" />
-    <ClInclude Include="Skills\마법사스킬\1차스킬\M1_MagicClaw.h" />
-    <ClInclude Include="Skills\마법사스킬\MagicianSkill.h" />
-    <ClInclude Include="Skills\전사스킬\1차스킬\W1_PowerStrike.h" />
-    <ClInclude Include="Skills\전사스킬\WarriorSkill.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Main\텍스트알피지(클래스).vcxproj" />
+    <ClInclude Include="CBaseArmor.h" />
+    <ClInclude Include="CBaseInventory.h" />
+    <ClInclude Include="CBasePotion.h" />
+    <ClInclude Include="CBaseThing.h" />
+    <ClInclude Include="CBaseWeapon.h" />
+    <ClInclude Include="CBehave.h" />
+    <ClInclude Include="CBehave_Buy.h" />
+    <ClInclude Include="CBehave_ItemUse.h" />
+    <ClInclude Include="CEnemy_MushMom.h" />
+    <ClInclude Include="CEnemy_RibbonPig.h" />
+    <ClInclude Include="CEquipmentInventory.h" />
+    <ClInclude Include="CMainGame.h" />
+    <ClInclude Include="CObject.h" />
+    <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CBaseShop.h" />
+    <ClInclude Include="CPlayerInventory.h" />
+    <ClInclude Include="CTier2Armor.h" />
+    <ClInclude Include="CTier2Potion.h" />
+    <ClInclude Include="CTier2Shop.h" />
+    <ClInclude Include="CTier2Weapon.h" />
+    <ClInclude Include="CTier3Potion.h" />
+    <ClInclude Include="CTier3Shop.h" />
+    <ClInclude Include="CTier3Weapon.h" />
+    <ClInclude Include="CTier3Armor.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="CEnemy.h" />
+    <ClInclude Include="CEnemy_Slime.h" />
+    <ClInclude Include="M1_MagicClaw.h" />
+    <ClInclude Include="MagicianSkill.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="pch_Monster.h" />
+    <ClInclude Include="pch_Skill.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="T1_LuckySeven.h" />
+    <ClInclude Include="ThiefSkill.h" />
+    <ClInclude Include="W0_BasicSkill.h" />
+    <ClInclude Include="W1_PowerStrike.h" />
+    <ClInclude Include="WarriorSkill.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

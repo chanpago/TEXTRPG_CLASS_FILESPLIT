@@ -109,231 +109,239 @@
     <Filter Include="상점\중급상점">
       <UniqueIdentifier>{3a3828bf-ef67-480e-9f62-27d868dd0d19}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{528e582c-f0f9-42c2-ad8a-3edd41d86f12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="텍스트알피지(클래스).cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BaseThing\CBaseThing.cpp">
+      <Filter>CBaseThing</Filter>
     </ClCompile>
-    <ClCompile Include="pch.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="BaseThing\방어구\CTier2Armor.cpp">
+      <Filter>CBaseThing\CArmor\중급방어구</Filter>
     </ClCompile>
-    <ClCompile Include="CMainGame.cpp">
+    <ClCompile Include="BaseThing\방어구\CTier3Armor.cpp">
+      <Filter>CBaseThing\CArmor\초급방어구</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\방어구\CBaseArmor.cpp">
+      <Filter>CBaseThing\CArmor</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\포션\CTier3Potion.cpp">
+      <Filter>CBaseThing\CPotion\초급포션</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\포션\CTier2Potion.cpp">
+      <Filter>CBaseThing\CPotion\중급포션</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\포션\CBasePotion.cpp">
+      <Filter>CBaseThing\CPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\무기\CTier2Weapon.cpp">
+      <Filter>CBaseThing\CWeapon\중급무기</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\무기\CTier3Weapon.cpp">
+      <Filter>CBaseThing\CWeapon\초급무기</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\무기\CBaseWeapon.cpp">
+      <Filter>CBaseThing\CWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\CBehave.cpp">
+      <Filter>CBehave</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\Buy\CBehave_Buy.cpp">
+      <Filter>CBehave\CBuy</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\ItemUse\CBehave_ItemUse.cpp">
+      <Filter>CBehave\CUseItem</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory\EquipmentInventory\CEquipmentInventory.cpp">
+      <Filter>CInventory\장비 인벤토리</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory\ItemInventory\CPlayerInventory.cpp">
+      <Filter>CInventory\아이템 인벤토리</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory\CBaseInventory.cpp">
+      <Filter>CInventory</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager\CMainGame.cpp">
       <Filter>MainGame</Filter>
     </ClCompile>
-    <ClCompile Include="CObject.cpp">
-      <Filter>Object</Filter>
+    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_MushMom.cpp">
+      <Filter>Object\Enemy\헤네시스</Filter>
     </ClCompile>
-    <ClCompile Include="CPlayer.cpp">
+    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_RibbonPig.cpp">
+      <Filter>Object\Enemy\헤네시스</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Enemy\헤네시스\CEnemy_Slime.cpp">
+      <Filter>Object\Enemy\헤네시스</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Enemy\CEnemy.cpp">
+      <Filter>Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Player\CPlayer.cpp">
       <Filter>Object\Player</Filter>
     </ClCompile>
-    <ClCompile Include="WarriorSkill.cpp">
-      <Filter>통합스킬\전사스킬</Filter>
+    <ClCompile Include="Object\CObject.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
-    <ClCompile Include="W1_PowerStrike.cpp">
-      <Filter>통합스킬\전사스킬\1차스킬</Filter>
+    <ClCompile Include="Main\텍스트알피지(클래스).cpp">
+      <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="W0_BasicSkill.cpp">
-      <Filter>통합스킬</Filter>
+    <ClCompile Include="Skills\도적스킬\1차스킬\T1_LuckySeven.cpp">
+      <Filter>통합스킬\도적스킬\1차스킬</Filter>
     </ClCompile>
-    <ClCompile Include="M1_MagicClaw.cpp">
+    <ClCompile Include="Skills\도적스킬\ThiefSkill.cpp">
+      <Filter>통합스킬\도적스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills\마법사스킬\1차스킬\M1_MagicClaw.cpp">
       <Filter>통합스킬\마법사스킬\1차스킬</Filter>
     </ClCompile>
-    <ClCompile Include="MagicianSkill.cpp">
+    <ClCompile Include="Skills\마법사스킬\MagicianSkill.cpp">
       <Filter>통합스킬\마법사스킬</Filter>
     </ClCompile>
-    <ClCompile Include="Skill.cpp">
+    <ClCompile Include="Skills\전사스킬\1차스킬\W1_PowerStrike.cpp">
+      <Filter>통합스킬\전사스킬\1차스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills\전사스킬\WarriorSkill.cpp">
+      <Filter>통합스킬\전사스킬</Filter>
+    </ClCompile>
+    <ClCompile Include="Skills\Skill.cpp">
       <Filter>통합스킬</Filter>
     </ClCompile>
-    <ClCompile Include="ThiefSkill.cpp">
-      <Filter>통합스킬\도적스킬</Filter>
+    <ClCompile Include="Skills\W0_BasicSkill.cpp">
+      <Filter>통합스킬</Filter>
     </ClCompile>
-    <ClCompile Include="T1_LuckySeven.cpp">
-      <Filter>통합스킬\도적스킬\1차스킬</Filter>
-    </ClCompile>
-    <ClCompile Include="CEnemy.cpp">
-      <Filter>Object\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="CEnemy_Slime.cpp">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClCompile>
-    <ClCompile Include="CEnemy_RibbonPig.cpp">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClCompile>
-    <ClCompile Include="CEnemy_MushMom.cpp">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClCompile>
-    <ClCompile Include="CBaseShop.cpp">
+    <ClCompile Include="shop\CBaseShop.cpp">
       <Filter>상점</Filter>
     </ClCompile>
-    <ClCompile Include="CTier3Shop.cpp">
+    <ClCompile Include="shop\CTier2Shop.cpp">
+      <Filter>상점\중급상점</Filter>
+    </ClCompile>
+    <ClCompile Include="shop\CTier3Shop.cpp">
       <Filter>상점\초급상점</Filter>
     </ClCompile>
-    <ClCompile Include="CBaseWeapon.cpp">
-      <Filter>CBaseThing\CWeapon</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier3Weapon.cpp">
-      <Filter>CBaseThing\CWeapon\초급무기</Filter>
-    </ClCompile>
-    <ClCompile Include="CBaseThing.cpp">
-      <Filter>CBaseThing</Filter>
-    </ClCompile>
-    <ClCompile Include="CBaseArmor.cpp">
-      <Filter>CBaseThing\CArmor</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier3Armor.cpp">
-      <Filter>CBaseThing\CArmor\초급방어구</Filter>
-    </ClCompile>
-    <ClCompile Include="CBasePotion.cpp">
-      <Filter>CBaseThing\CPotion</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier3Potion.cpp">
-      <Filter>CBaseThing\CPotion\초급포션</Filter>
-    </ClCompile>
-    <ClCompile Include="CBehave_Buy.cpp">
-      <Filter>CBehave\CBuy</Filter>
-    </ClCompile>
-    <ClCompile Include="CBehave.cpp">
-      <Filter>CBehave</Filter>
-    </ClCompile>
-    <ClCompile Include="CBehave_ItemUse.cpp">
-      <Filter>CBehave\CUseItem</Filter>
-    </ClCompile>
-    <ClCompile Include="CBaseInventory.cpp">
-      <Filter>CInventory</Filter>
-    </ClCompile>
-    <ClCompile Include="CPlayerInventory.cpp">
-      <Filter>CInventory\아이템 인벤토리</Filter>
-    </ClCompile>
-    <ClCompile Include="CEquipmentInventory.cpp">
-      <Filter>CInventory\장비 인벤토리</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier2Weapon.cpp">
-      <Filter>CBaseThing\CWeapon\중급무기</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier2Armor.cpp">
-      <Filter>CBaseThing\CArmor\중급방어구</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier2Potion.cpp">
-      <Filter>CBaseThing\CPotion\중급포션</Filter>
-    </ClCompile>
-    <ClCompile Include="CTier2Shop.cpp">
-      <Filter>상점\중급상점</Filter>
+    <ClCompile Include="Source\pch.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Define.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="CMainGame.h">
-      <Filter>MainGame</Filter>
-    </ClInclude>
-    <ClInclude Include="CObject.h">
-      <Filter>Object</Filter>
-    </ClInclude>
-    <ClInclude Include="CPlayer.h">
-      <Filter>Object\Player</Filter>
-    </ClInclude>
-    <ClInclude Include="WarriorSkill.h">
-      <Filter>통합스킬\전사스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="W1_PowerStrike.h">
-      <Filter>통합스킬\전사스킬\1차스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="W0_BasicSkill.h">
-      <Filter>통합스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="MagicianSkill.h">
-      <Filter>통합스킬\마법사스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="Skill.h">
-      <Filter>통합스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="M1_MagicClaw.h">
-      <Filter>통합스킬\마법사스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="ThiefSkill.h">
-      <Filter>통합스킬\도적스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="T1_LuckySeven.h">
-      <Filter>통합스킬\도적스킬\1차스킬</Filter>
-    </ClInclude>
-    <ClInclude Include="pch_Skill.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemy.h">
-      <Filter>Object\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemy_Slime.h">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemy_RibbonPig.h">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClInclude>
-    <ClInclude Include="pch_Monster.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="CEnemy_MushMom.h">
-      <Filter>Object\Enemy\헤네시스</Filter>
-    </ClInclude>
-    <ClInclude Include="CBaseShop.h">
-      <Filter>상점</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier3Shop.h">
-      <Filter>상점\초급상점</Filter>
-    </ClInclude>
-    <ClInclude Include="CBaseWeapon.h">
-      <Filter>CBaseThing\CWeapon</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier3Weapon.h">
-      <Filter>CBaseThing\CWeapon\초급무기</Filter>
-    </ClInclude>
-    <ClInclude Include="CBaseThing.h">
+    <ClInclude Include="BaseThing\CBaseThing.h">
       <Filter>CBaseThing</Filter>
     </ClInclude>
-    <ClInclude Include="CBaseArmor.h">
-      <Filter>CBaseThing\CArmor</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier3Armor.h">
-      <Filter>CBaseThing\CArmor\초급방어구</Filter>
-    </ClInclude>
-    <ClInclude Include="CBasePotion.h">
-      <Filter>CBaseThing\CPotion</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier3Potion.h">
-      <Filter>CBaseThing\CPotion\초급포션</Filter>
-    </ClInclude>
-    <ClInclude Include="CBehave_Buy.h">
-      <Filter>CBehave\CBuy</Filter>
-    </ClInclude>
-    <ClInclude Include="CBehave.h">
-      <Filter>CBehave</Filter>
-    </ClInclude>
-    <ClInclude Include="CBehave_ItemUse.h">
-      <Filter>CBehave\CUseItem</Filter>
-    </ClInclude>
-    <ClInclude Include="CBaseInventory.h">
-      <Filter>CInventory</Filter>
-    </ClInclude>
-    <ClInclude Include="CPlayerInventory.h">
-      <Filter>CInventory\아이템 인벤토리</Filter>
-    </ClInclude>
-    <ClInclude Include="CEquipmentInventory.h">
-      <Filter>CInventory\장비 인벤토리</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier2Weapon.h">
-      <Filter>CBaseThing\CWeapon\중급무기</Filter>
-    </ClInclude>
-    <ClInclude Include="CTier2Armor.h">
+    <ClInclude Include="BaseThing\방어구\CTier2Armor.h">
       <Filter>CBaseThing\CArmor\중급방어구</Filter>
     </ClInclude>
-    <ClInclude Include="CTier2Potion.h">
+    <ClInclude Include="BaseThing\방어구\CTier3Armor.h">
+      <Filter>CBaseThing\CArmor\초급방어구</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\방어구\CBaseArmor.h">
+      <Filter>CBaseThing\CArmor</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\포션\CTier3Potion.h">
+      <Filter>CBaseThing\CPotion\초급포션</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\포션\CTier2Potion.h">
       <Filter>CBaseThing\CPotion\중급포션</Filter>
     </ClInclude>
-    <ClInclude Include="CTier2Shop.h">
+    <ClInclude Include="BaseThing\포션\CBasePotion.h">
+      <Filter>CBaseThing\CPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\무기\CTier2Weapon.h">
+      <Filter>CBaseThing\CWeapon\중급무기</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\무기\CTier3Weapon.h">
+      <Filter>CBaseThing\CWeapon\초급무기</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseThing\무기\CBaseWeapon.h">
+      <Filter>CBaseThing\CWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\CBehave.h">
+      <Filter>CBehave</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\Buy\CBehave_Buy.h">
+      <Filter>CBehave\CBuy</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\ItemUse\CBehave_ItemUse.h">
+      <Filter>CBehave\CUseItem</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory\EquipmentInventory\CEquipmentInventory.h">
+      <Filter>CInventory\장비 인벤토리</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory\ItemInventory\CPlayerInventory.h">
+      <Filter>CInventory\아이템 인벤토리</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory\CBaseInventory.h">
+      <Filter>CInventory</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\CMainGame.h">
+      <Filter>MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_MushMom.h">
+      <Filter>Object\Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_RibbonPig.h">
+      <Filter>Object\Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\헤네시스\CEnemy_Slime.h">
+      <Filter>Object\Enemy\헤네시스</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Enemy\CEnemy.h">
+      <Filter>Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Player\CPlayer.h">
+      <Filter>Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\CObject.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\도적스킬\1차스킬\T1_LuckySeven.h">
+      <Filter>통합스킬\도적스킬\1차스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\도적스킬\ThiefSkill.h">
+      <Filter>통합스킬\도적스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\마법사스킬\1차스킬\M1_MagicClaw.h">
+      <Filter>통합스킬\마법사스킬\1차스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\마법사스킬\MagicianSkill.h">
+      <Filter>통합스킬\마법사스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\전사스킬\1차스킬\W1_PowerStrike.h">
+      <Filter>통합스킬\전사스킬\1차스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\전사스킬\WarriorSkill.h">
+      <Filter>통합스킬\전사스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\Skill.h">
+      <Filter>통합스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="Skills\W0_BasicSkill.h">
+      <Filter>통합스킬</Filter>
+    </ClInclude>
+    <ClInclude Include="shop\CBaseShop.h">
+      <Filter>상점</Filter>
+    </ClInclude>
+    <ClInclude Include="shop\CTier2Shop.h">
       <Filter>상점\중급상점</Filter>
     </ClInclude>
+    <ClInclude Include="shop\CTier3Shop.h">
+      <Filter>상점\초급상점</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\pch_Monster.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\pch_Skill.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Main\텍스트알피지(클래스).vcxproj">
+      <Filter>Main</Filter>
+    </None>
   </ItemGroup>
 </Project>

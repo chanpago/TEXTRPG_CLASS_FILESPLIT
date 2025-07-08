@@ -1,9 +1,9 @@
 #include "pch.h"
 #include "CBehave_ItemUse.h"
-#include "CPlayer.h"
-#include "CPlayerInventory.h"
-#include "CEquipmentInventory.h"
-#include "CTier3Potion.h"
+#include "Player/CPlayer.h"
+#include "ItemInventory/CPlayerInventory.h"
+#include "EquipmentInventory/CEquipmentInventory.h"
+#include "Æ÷¼Ç/CTier3Potion.h"
 #include "CBaseThing.h"
 
 CBehave_ItemUse::CBehave_ItemUse()

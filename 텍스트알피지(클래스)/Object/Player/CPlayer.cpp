@@ -1,14 +1,14 @@
 #include "pch.h"
 #include "CPlayer.h"
 #include "CObject.h"
-#include "WarriorSkill.h"
-#include "MagicianSkill.h"
-#include "ThiefSkill.h"
+#include "전사스킬/WarriorSkill.h"
+#include "마법사스킬/MagicianSkill.h"
+#include "도적스킬/ThiefSkill.h"
 #include "W0_BasicSkill.h"
 #include "Skill.h"
 
-#include "CPlayerInventory.h"
-#include "CEquipmentInventory.h"
+#include "ItemInventory/CPlayerInventory.h"
+#include "EquipmentInventory/CEquipmentInventory.h"
 
 #include "pch_Skill.h"
 

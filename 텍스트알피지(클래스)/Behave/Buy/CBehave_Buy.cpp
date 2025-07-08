@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CBehave_Buy.h"
-#include "CPlayer.h"
-#include "CPlayerInventory.h"
+#include "Player/CPlayer.h"
+#include "ItemInventory/CPlayerInventory.h"
 #include "CBaseThing.h"
 
 CBehave_Buy::CBehave_Buy()

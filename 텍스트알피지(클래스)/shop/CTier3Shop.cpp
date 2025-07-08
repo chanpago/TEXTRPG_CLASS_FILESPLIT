@@ -1,10 +1,10 @@
 #include "CBaseThing.h"
 #include "CTier3Shop.h"
-#include "CTier3Weapon.h"
-#include "CTier3Armor.h"
-#include "CTier3Potion.h"
-#include "CBehave_Buy.h"
-#include "CPlayer.h"
+#include "公扁/CTier3Weapon.h"
+#include "规绢备/CTier3Armor.h"
+#include "器记/CTier3Potion.h"
+#include "Buy/CBehave_Buy.h"
+#include "Player/CPlayer.h"
 
 CTier3Shop::CTier3Shop() : BuyItem(nullptr)
 {

@@ -12,6 +12,7 @@ public:
 
 	virtual void Render() = 0;
 
+// 인벤토리 복사 불가
 private:
 	CBaseInventory(const CBaseInventory&);
 	CBaseInventory& operator=(const CBaseInventory&);
