@@ -17,6 +17,7 @@ public:
 
 	void Render();
 
+	// getter
 	std::unordered_map< std::shared_ptr < CBaseThing>, int>* GetInventory() { return &m_Inventory; }
 
 private:

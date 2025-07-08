@@ -17,25 +17,22 @@ public:
 	virtual void				Release();	  // 동적할당한 메모리 해제 코드를 모아 놓는 함수
 
 	virtual void				Render() const;
+	virtual void				Die() const = 0;
 
+	// getter
+	inline OBJECTINFO**			GetObject() { return &m_pObject; }
+	inline const int			GetObjectHP()const { return m_pObject->iHealthValue; }
+	inline const int			GetObjectATK() const { return m_pObject->iAttackValue; }
+	inline const std::string	GetObjectJob() const { return m_pObject->sJob; }
+	inline const int			GetEXP() const { return m_pObject->iMaxEXP; }
+	inline const int			GetObjectType() const { return m_pObject->iObjectType; }
+
+	// setter
 	void						SetObject(const std::string _sName, const std::string _sJob, const int _iObjectType);
 	void						SetObject(const std::string _sName, const std::string _sJob, const int AttackValue, const int MaxHealthValue, const int MaxManaValue, const int EXP, const int Level, const int _iObjectType);
-	inline OBJECTINFO**			GetObject()					{ return &m_pObject; }
-
-
 	inline void					SetObjectHP(int iHPValue)   { m_pObject->iHealthValue = iHPValue; }
-	inline const int			GetObjectHP()const			{ return m_pObject->iHealthValue; }
-
 	inline void					SetObjectATK(const int ATKValue) { m_pObject->iAttackValue = ATKValue; }
-	inline const int			GetObjectATK() const		{ return m_pObject->iAttackValue; }
-	inline const std::string	GetObjectJob() const		{ return m_pObject->sJob; }
 	
-	inline const int			GetEXP() const				{ return m_pObject->iMaxEXP; }
-	
-	inline const int			GetObjectType() const		{ return m_pObject->iObjectType; }
-
-
-	virtual void				Die() const = 0;
 private:
 	OBJECTINFO*		m_pObject;
 };

@@ -14,13 +14,11 @@ public:
 
 	virtual void Render() = 0;
 
-	virtual int GetType() const  = 0;
-
-	virtual int GetUniqueNum() const = 0;
-
-	virtual int GetPrice() const = 0;
-
-	virtual std::string GetName() const = 0;
-	virtual int GetValue() const = 0;
+	// getter
+	virtual int			GetType() const			= 0;
+	virtual int			GetUniqueNum() const	= 0;
+	virtual int			GetPrice() const		= 0;
+	virtual std::string GetName() const			= 0;
+	virtual int			GetValue() const		= 0;
 };
 

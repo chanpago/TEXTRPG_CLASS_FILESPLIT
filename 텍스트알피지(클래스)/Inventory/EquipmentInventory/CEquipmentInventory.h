@@ -23,9 +23,11 @@ public:
 	bool IsWeapon() const;
 	bool IsArmor() const;
 
+	// getter
 	inline std::shared_ptr<CBaseThing> GetWeapon() { return m_pWeapon; }
 	inline std::shared_ptr<CBaseThing> GetArmor()  { return m_pArmor; }
 
+	// setter
 	inline void SetWeapon(std::shared_ptr<CBaseThing> Weapon) { m_pWeapon = Weapon; }
 	inline void SetArmor(std::shared_ptr<CBaseThing> Armor)	  { m_pArmor = Armor; }
 

@@ -43,37 +43,35 @@ public:
 
 	//void						Load();
 	//bool						Save();
+
 	void						CreateSkill(const int iNum);
-
-	inline const int			GetSkillsCount() const			{ return m_pPlayerInfo->pSkills->GetSkillCount(); }
-	inline Skill*				GetSkills() const				{ return m_pPlayerInfo->pSkills; }
-	inline W0_BasicSkill*		GetSkill(const int iNum)		{ return (*GetSkills())[iNum]; }
-
-	inline int					GetMoney()const					{ return m_pPlayerInfo->iMoney; }
-	inline CPlayerInventory*	GetInventory()const				{ return m_pPlayerInventory; }
-	inline CEquipmentInventory* GetEquipInventory()const		{ return m_pEquipmentInventory; }
-	inline int					GetMAXHP() 						{ return (*GetObject())->iMaxHealthValue; }
-
 	void						AddEXP(const int iNum);
-	inline void					SetEXP(const int iNum)			{ (*GetObject())->iNowEXP = iNum; }
-	inline void					SetMoney(const int iNewMoney)   { m_pPlayerInfo->iMoney = iNewMoney; }
-
-
-	void						SetPlayerInfo();
-	void						SetPlayerInven();
-
-	void						SetPlayerEquipInven();
-
 	void						LevelUP();
-
-	void						SetStat();
-	inline void					Die() const						{ std::cout << "플레이어가 죽었습니다! " << std::endl; }
-	
-
-
-
+	inline void					Die() const { std::cout << "플레이어가 죽었습니다! " << std::endl; }
 	void						AddStat(const int iType);
 	void						CalcAttackValue();
+
+
+	// getter
+	inline const int			GetSkillsCount() const		{ return m_pPlayerInfo->pSkills->GetSkillCount(); }
+	inline Skill*				GetSkills() const			{ return m_pPlayerInfo->pSkills; }
+	inline W0_BasicSkill*		GetSkill(const int iNum)	{ return (*GetSkills())[iNum]; }
+	inline int					GetMoney()const				{ return m_pPlayerInfo->iMoney; }
+	inline CPlayerInventory*	GetInventory()const			{ return m_pPlayerInventory; }
+	inline CEquipmentInventory* GetEquipInventory()const	{ return m_pEquipmentInventory; }
+	inline int					GetMAXHP()					{ return (*GetObject())->iMaxHealthValue; }
+
+	// setter
+	inline void					SetEXP(const int iNum)			{ (*GetObject())->iNowEXP = iNum; }
+	inline void					SetMoney(const int iNewMoney)   { m_pPlayerInfo->iMoney = iNewMoney; }
+	void						SetPlayerInfo();
+	void						SetPlayerInven();
+	void						SetPlayerEquipInven();
+	void						SetStat();
+
+
+
+	
 
 private:
 	CPlayer(const CPlayer&);
