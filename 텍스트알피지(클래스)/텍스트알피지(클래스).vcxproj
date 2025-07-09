@@ -138,9 +138,13 @@
     <ClCompile Include="BaseThing\포션\CBasePotion.cpp" />
     <ClCompile Include="BaseThing\포션\CTier2Potion.cpp" />
     <ClCompile Include="BaseThing\포션\CTier3Potion.cpp" />
+    <ClCompile Include="Behave\BehaveManager\CBehaveManager.cpp" />
     <ClCompile Include="Behave\Buy\CBehave_Buy.cpp" />
     <ClCompile Include="Behave\CBehave.cpp" />
+    <ClCompile Include="Behave\Fight\CBehave_Fight.cpp" />
     <ClCompile Include="Behave\ItemUse\CBehave_ItemUse.cpp" />
+    <ClCompile Include="Behave\Sell\CBehave_Sell.cpp" />
+    <ClCompile Include="Behave\Unequip\CBehave_Unequip.cpp" />
     <ClCompile Include="GameManager\CMainGame.cpp" />
     <ClCompile Include="Inventory\CBaseInventory.cpp" />
     <ClCompile Include="Inventory\EquipmentInventory\CEquipmentInventory.cpp" />
@@ -176,9 +180,13 @@
     <ClInclude Include="BaseThing\포션\CBasePotion.h" />
     <ClInclude Include="BaseThing\포션\CTier2Potion.h" />
     <ClInclude Include="BaseThing\포션\CTier3Potion.h" />
+    <ClInclude Include="Behave\BehaveManager\CBehaveManager.h" />
     <ClInclude Include="Behave\Buy\CBehave_Buy.h" />
     <ClInclude Include="Behave\CBehave.h" />
+    <ClInclude Include="Behave\Fight\CBehave_Fight.h" />
     <ClInclude Include="Behave\ItemUse\CBehave_ItemUse.h" />
+    <ClInclude Include="Behave\Sell\CBehave_Sell.h" />
+    <ClInclude Include="Behave\Unequip\CBehave_Unequip.h" />
     <ClInclude Include="GameManager\CMainGame.h" />
     <ClInclude Include="Header\Define.h" />
     <ClInclude Include="Header\pch.h" />

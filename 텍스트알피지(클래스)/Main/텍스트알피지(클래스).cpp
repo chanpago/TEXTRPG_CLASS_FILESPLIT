@@ -7,10 +7,9 @@ int main()
 
     CMainGame MainGame;
     //int* leakTest = new int(123);
-    if (MainGame.Initialize())
-    {
-        MainGame.Update();
-    }
+    MainGame.Initialize();
+    MainGame.Update();
+    
 
     
 

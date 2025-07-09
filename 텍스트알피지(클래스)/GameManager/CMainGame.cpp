@@ -1,13 +1,20 @@
 #include "pch.h"
 #include "CMainGame.h"
 #include "Player/CPlayer.h"
-#include "W0_BasicSkill.h"
 #include "CTier3Shop.h"
 #include "CTier2Shop.h"
 #include "CBehave.h"
-#include "ItemUse/CBehave_ItemUse.h"
 
-CMainGame::CMainGame(): m_pPlayer(nullptr), Behave_UseItem(nullptr){}
+#include "BehaveManager/CBehaveManager.h"
+#include "ItemUse/CBehave_ItemUse.h"
+#include "Buy/CBehave_Buy.h"
+#include "Unequip/CBehave_Unequip.h"
+#include "Sell/CBehave_Sell.h"
+#include "Fight/CBehave_Fight.h"
+
+
+
+CMainGame::CMainGame(): m_pPlayer(nullptr), m_pBehaveManager(nullptr){}
 
 CMainGame::~CMainGame()
 {
@@ -16,21 +23,21 @@ CMainGame::~CMainGame()
 
 void CMainGame::Release()
 {
-	SAFE_DELETE(Behave_UseItem);
+	
 	SAFE_DELETE(m_pPlayer);
+	SAFE_DELETE(m_pBehaveManager);
 }
 																																			   
-bool CMainGame::Initialize()
+void CMainGame::Initialize()
 {
-	Behave_UseItem = new CBehave_ItemUse;
-
-
 	//여기에 플레이어 생성하는 함수 들어가야 할듯
-	if (!m_pPlayer)
-	{
-		m_pPlayer = new CPlayer;
-		return m_pPlayer->Initialize();
-	}
+	
+	m_pPlayer = new CPlayer;
+	m_pPlayer->Initialize();
+	
+
+	m_pBehaveManager = new CBehaveManager;
+	m_pBehaveManager->Initialize();
 	
 }
 
@@ -44,7 +51,7 @@ void CMainGame::Update()
 
 		// 플레이어 정보 출력함수
 		m_pPlayer->Render();
-		std::cout << "1. 사냥터 2. 상점 3. 아이템 사용 4. 종료 : ";
+		std::cout << "1. 사냥터 2. 상점 3. 아이템 사용 4. 아이템 장착 해제 5. 종료 : ";
 		std::cin >> iInput;
 
 		switch (iInput)
@@ -56,9 +63,12 @@ void CMainGame::Update()
 			Shop();
 			break;
 		case 3:
-			Behave_UseItem->UseItem(m_pPlayer);
+			m_pBehaveManager->GetBehave_ItemUse()->UseItem(m_pPlayer);
 			break;
 		case 4:
+			m_pBehaveManager->GetBehave_Unequip()->UnEquipment(m_pPlayer);
+			break;
+		case 5:
 			return;
 		default:
 			std::cout << "잘못 누르셨습니다" << std::endl;
@@ -123,69 +133,14 @@ void CMainGame::Field()
 		if (iInput == 5)continue;
 		else
 		{
-			// fight
-			Fight(m_pPlayer, pEnemy);
+			m_pBehaveManager->GetBehave_Fight()->Fight(m_pPlayer, pEnemy);
 			SAFE_DELETE(pEnemy);
 		}
 
 	}
 }
 
-void CMainGame::Fight(CPlayer* pPlayer, CObject* pEnemy)
-{
-	int iInput(0);
 
-
-	while (true)
-	{
-		system("cls");
-		pPlayer->Render();
-
-		std::cout << std::endl;
-		std::cout << std::endl;
-
-		pEnemy->Render();
-		std::cout << "1. 공격 2.스킬 사용 3. 도망 : ";
-		std::cin >> iInput;
-
-		switch (iInput)
-		{
-		case 1:
-			pEnemy->Update(2,pPlayer->GetObjectATK());
-			pPlayer->Update(2,pEnemy->GetObjectATK());
-			break;
-		case 2:
-			SkillAttack(pPlayer, pEnemy);
-			break;
-		case 3:
-			return;
-		default:
-			std::cout << "잘못 누르셨습니다" << std::endl;
-			break;
-		}
-
-		if (pEnemy->GetObjectHP() <= 0)
-		{
-			pEnemy->Die();
-			std::cout << "승리!" << std::endl;
-			std::cout << "경험치 " << pEnemy->GetEXP() << "를 획득 하였습니다!" << std::endl;
-			pPlayer->AddEXP(pEnemy->GetEXP());
-			system("pause");
-
-			if (m_pPlayer->GetObjectHP() <= 0) m_pPlayer->SetObjectHP(100);
-
-			return;
-		}
-		else if (pPlayer->GetObjectHP() <= 0)
-		{
-			
-			pPlayer->Die();
-			pPlayer->SetObjectHP(100);
-			system("pause");
-			return;
-		}
-	}
-}
 
 void CMainGame::Shop()
 {
@@ -201,7 +156,7 @@ void CMainGame::Shop()
 		system("cls");
 		m_pPlayer->Render();
 		//std::cout << "========================================" << std::endl;
-		std::cout << "1. 초급상점 2. 중급상점 3. 고급상점 4.나가기: ";
+		std::cout << "1. 초급상점 2. 중급상점 3. 고급상점 4. 아이템 팔기 5.나가기: ";
 		std::cin >> iInput;
 
 		switch (iInput)
@@ -221,6 +176,9 @@ void CMainGame::Shop()
 		case 3:
 			break;
 		case 4:
+			m_pBehaveManager->GetBehave_Sell()->Sell(m_pPlayer);
+			break;
+		case 5:
 			SAFE_DELETE(pShop);
 			return;
 		default:
@@ -230,38 +188,3 @@ void CMainGame::Shop()
 	}
 }
 
-void CMainGame::SkillAttack(CPlayer* pPlayer, CObject* pEnemy)
-{
-	int iInput(0);
-
-	while (true)
-	{
-		if (pEnemy->GetObjectHP() <= 0)return;
-		system("cls");
-		pPlayer->Render();
-		pEnemy->Render();
-		std::cout << "몇 번째 스킬을 사용하시겠습니까? 0입력->나가기 :";
-		std::cin >> iInput;
-
-		if (iInput > pPlayer->GetSkillsCount() || iInput < 0)
-		{
-			std::cout << "잘못 누르셨습니다" << std::endl;
-			system("pause");
-			continue;
-		}
-		else if (iInput == 0)
-		{
-			return;
-		}
-		else
-		{	
-			// 스킬 이름 출력
-			std::cout << "사용한 스킬: [ " << pPlayer->GetSkill(iInput - 1)->GetSkillName() << " ]" << std::endl;
-
-			pEnemy->Update(2,pPlayer->GetSkill(iInput - 1)->UseSkill(pPlayer->GetObjectATK()));
-			pPlayer->Update(2,pEnemy->GetObjectATK());
-			system("pause");
-		}
-	}
-	
-}

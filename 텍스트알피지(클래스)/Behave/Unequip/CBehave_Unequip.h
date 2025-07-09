@@ -4,18 +4,18 @@
 class CPlayer;
 class CBaseThing;
 
-class CBehave_Buy : public CBehave
+class CBehave_Unequip : public CBehave
 {
 public:
-	CBehave_Buy();
-	~CBehave_Buy();
+	CBehave_Unequip();
+	~CBehave_Unequip();
 
 public:
 	void Initialize();
 	void Update();
 	void Release();
 
-	bool Buy(CPlayer* player, std::shared_ptr<CBaseThing> something);
+	void UnEquipment(CPlayer* player);
 private:
 	
 };

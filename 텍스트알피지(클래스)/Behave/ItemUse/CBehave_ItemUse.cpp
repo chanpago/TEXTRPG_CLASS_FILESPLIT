@@ -43,9 +43,10 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 		else
 		{
 			CPlayerInventory* playerinventory = player->GetInventory();
-			std::unordered_map<std::shared_ptr < CBaseThing>, int>* inventory = playerinventory->GetInventory();
+			std::vector<std::pair<std::shared_ptr<CBaseThing>, int>>* inventory = (playerinventory->GetInventory());
 
 			auto it = inventory->begin();
+			auto itEnd = inventory->end() - 1;
 			iInput -= 1;
 
 			for (int i = 0; i < iInput; ++i) it++;
@@ -85,21 +86,15 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 				// 무기가 이미 있다면
 				if (playerEquipInven->IsWeapon())
 				{
-					std::shared_ptr<CBaseThing> Weapon = playerEquipInven->GetWeapon();
+					std::shared_ptr<CBaseThing> BeforeWeapon = playerEquipInven->GetWeapon();
 
-					//인벤토리에서 삭제
-					playerinventory->GetInventory()->erase(it);
+					//2.장비 교체
+					it->first = BeforeWeapon;
+					it->second = 1;
+					player->SetObjectATK(player->GetObjectATK() - BeforeWeapon->GetValue());
 
-
-					player->SetObjectATK(player->GetObjectATK() - Weapon->GetValue());
-
-					//원래 끼고 있던 무기, 인벤토리에 업데이트
-					playerinventory->Update(Weapon, Weapon->GetType(), Weapon->GetUniqueNum());
-
-					//장비에 새로운 무기 등록
+					//3. 장비 업로드
 					playerEquipInven->SetWeapon(item);
-
-
 					player->SetObjectATK(player->GetObjectATK() + item->GetValue());
 
 				}
@@ -109,7 +104,29 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 					playerEquipInven->SetWeapon(item);
 
 					//인벤토리에서 삭제
-					playerinventory->GetInventory()->erase(it);
+					// erase하면 벡터의 사이즈가 줄어듦
+					// 그냥 it위치를 null하는게 나을듯
+					it->first = nullptr;
+					it->second = 0;
+
+
+
+					// 여기서 땡겨주는 작업 + size줄이기
+					int i = iInput;
+					auto Nextit = it;
+					for (; i < playerinventory->GetInventorySize() - 1; ++i)
+					{
+						++Nextit;
+						it->first = Nextit->first;
+						it->second = Nextit->second;
+					}
+				
+
+					// 마지막요소 삭제
+					Nextit->first = nullptr;
+					Nextit->second = 0;
+
+					playerinventory->SetGetInventorySize(playerinventory->GetInventorySize() - 1);
 				}
 				
 			}
@@ -121,23 +138,44 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 				// 방어구가 이미 있다면
 				if (playerEquipInven->IsArmor())
 				{
-					std::shared_ptr<CBaseThing> Armor = playerEquipInven->GetArmor();
+					std::shared_ptr<CBaseThing> BeforeArmor = playerEquipInven->GetArmor();
 
-					//인벤토리에서 삭제
-					playerinventory->GetInventory()->erase(it);
+					//2.장비 교체
+					it->first = BeforeArmor;
+					it->second = 1;
 
-					//원래 끼고 있던 방어구, 인벤토리에 업데이트
-					playerinventory->Update(Armor, Armor->GetType(), Armor->GetUniqueNum());
-
-					//장비에 새로운 방어구 등록
+					//3. 장비 업로드
 					playerEquipInven->SetArmor(item);
+
 				}
 				else
-				{
+				{			
 					playerEquipInven->SetArmor(item);
 
 					//인벤토리에서 삭제
-					playerinventory->GetInventory()->erase(it);
+					// erase하면 벡터의 사이즈가 줄어듦
+					// 그냥 it위치를 null하는게 나을듯
+					it->first = nullptr;
+					it->second = 0;
+
+
+
+					// 여기서 땡겨주는 작업 + size줄이기
+					int i = iInput;
+					auto Nextit = it;
+					for (; i < playerinventory->GetInventorySize() - 1; ++i)
+					{
+						++Nextit;
+						it->first = Nextit->first;
+						it->second = Nextit->second;
+					}
+
+
+					// 마지막요소 삭제
+					Nextit->first = nullptr;
+					Nextit->second = 0;
+
+					playerinventory->SetGetInventorySize(playerinventory->GetInventorySize() - 1);
 				}
 			}
 		}

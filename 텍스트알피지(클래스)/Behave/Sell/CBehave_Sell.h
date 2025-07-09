@@ -4,19 +4,17 @@
 class CPlayer;
 class CBaseThing;
 
-class CBehave_Buy : public CBehave
+class CBehave_Sell : public CBehave
 {
 public:
-	CBehave_Buy();
-	~CBehave_Buy();
+	CBehave_Sell();
+	~CBehave_Sell();
 
 public:
 	void Initialize();
 	void Update();
 	void Release();
 
-	bool Buy(CPlayer* player, std::shared_ptr<CBaseThing> something);
-private:
-	
+	void Sell(CPlayer* player);
 };
 

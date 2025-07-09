@@ -112,6 +112,18 @@
     <Filter Include="Main">
       <UniqueIdentifier>{528e582c-f0f9-42c2-ad8a-3edd41d86f12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CBehave\CUnequip">
+      <UniqueIdentifier>{401b0cbf-c715-437a-8319-83d3f26a6927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave\CSell">
+      <UniqueIdentifier>{8d8a9882-ea37-4cc7-adca-f5158e370ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave\CBehaveManager">
+      <UniqueIdentifier>{90355090-20f4-4c2e-95e8-afa22d6edd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CBehave\CFight">
+      <UniqueIdentifier>{66ed2f71-7399-46f2-8dc0-c15f88d53bd2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseThing\CBaseThing.cpp">
@@ -221,6 +233,18 @@
     </ClCompile>
     <ClCompile Include="Source\pch.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\Unequip\CBehave_Unequip.cpp">
+      <Filter>CBehave\CUnequip</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\Sell\CBehave_Sell.cpp">
+      <Filter>CBehave\CSell</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\BehaveManager\CBehaveManager.cpp">
+      <Filter>CBehave\CBehaveManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Behave\Fight\CBehave_Fight.cpp">
+      <Filter>CBehave\CFight</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +361,18 @@
     </ClInclude>
     <ClInclude Include="Header\Define.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\Unequip\CBehave_Unequip.h">
+      <Filter>CBehave\CUnequip</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\Sell\CBehave_Sell.h">
+      <Filter>CBehave\CSell</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\BehaveManager\CBehaveManager.h">
+      <Filter>CBehave\CBehaveManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Behave\Fight\CBehave_Fight.h">
+      <Filter>CBehave\CFight</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
