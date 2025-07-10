@@ -31,7 +31,7 @@ struct OBJECTINFO
 struct PLAYERINFO
 {
 	PLAYERINFO() : pSkills(nullptr),
-		iStatPoint(0), iSTR(4), iDEX(4), iINT(4), iLUK(4), iMoney(2000) {}
+		iStatPoint(0), iSTR(4), iDEX(4), iINT(4), iLUK(4), iMoney(4000) {}
 
 
 

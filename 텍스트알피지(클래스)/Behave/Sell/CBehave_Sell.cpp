@@ -50,6 +50,7 @@ void CBehave_Sell::Sell(CPlayer* player)
 			CPlayerInventory* playerinventory = player->GetInventory();
 			std::vector<std::pair<std::shared_ptr<CBaseThing>, int>>* inventory = (playerinventory->GetInventory());
 
+			// 입력받은 아이템 위치로 이동
 			auto it = inventory->begin();
 			for (int i = 0; i < iInput; ++i) it++;
 
@@ -67,17 +68,19 @@ void CBehave_Sell::Sell(CPlayer* player)
 
 				// 여기서 땡겨주는 작업 + size줄이기
 				int i = iInput;
-				auto Nextit = it;
+				auto Nextit = it + 1;
 				for (; i < playerinventory->GetInventorySize() - 1; ++i)
 				{
-					++Nextit;
+					
 					it->first = Nextit->first;
 					it->second = Nextit->second;
+					++it;
+					++Nextit;
 				}
 
 				// 마지막요소 삭제
-				Nextit->first = nullptr;
-				Nextit->second = 0;
+				it->first = nullptr;
+				it->second = 0;
 
 				playerinventory->SetGetInventorySize(playerinventory->GetInventorySize() - 1);
 			}

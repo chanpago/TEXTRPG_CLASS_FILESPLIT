@@ -135,9 +135,6 @@
     <ClCompile Include="BaseThing\방어구\CTier3Armor.cpp">
       <Filter>CBaseThing\CArmor\초급방어구</Filter>
     </ClCompile>
-    <ClCompile Include="BaseThing\방어구\CBaseArmor.cpp">
-      <Filter>CBaseThing\CArmor</Filter>
-    </ClCompile>
     <ClCompile Include="BaseThing\포션\CTier3Potion.cpp">
       <Filter>CBaseThing\CPotion\초급포션</Filter>
     </ClCompile>
@@ -245,6 +242,9 @@
     </ClCompile>
     <ClCompile Include="Behave\Fight\CBehave_Fight.cpp">
       <Filter>CBehave\CFight</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseThing\방어구\CBaseArmor.cpp">
+      <Filter>CBaseThing\CArmor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

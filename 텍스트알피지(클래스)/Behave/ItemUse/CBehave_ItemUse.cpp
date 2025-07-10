@@ -42,8 +42,16 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 		if (iInput == 0)break;
 		else
 		{
+			
 			CPlayerInventory* playerinventory = player->GetInventory();
 			std::vector<std::pair<std::shared_ptr<CBaseThing>, int>>* inventory = (playerinventory->GetInventory());
+
+			if (iInput > playerinventory->GetInventorySize())
+			{
+				std::cout << "잘못된 입력입니다!" << std::endl;
+				system("pause");
+				return;
+			}
 
 			auto it = inventory->begin();
 			auto itEnd = inventory->end() - 1;
@@ -70,7 +78,27 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 
 					if (itemCount == 1)
 					{
-						inventory->erase(it);
+						//inventory->erase(it);
+						it->first = nullptr;
+						it->second = 0;
+
+						// 여기서 땡겨주는 작업 + size줄이기
+						int i = iInput;
+						auto Nextit = it + 1;
+						for (; i < playerinventory->GetInventorySize() - 1; ++i)
+						{
+
+							it->first = Nextit->first;
+							it->second = Nextit->second;
+							++it;
+							++Nextit;
+						}
+
+						// 마지막요소 삭제
+						Nextit->first = nullptr;
+						Nextit->second = 0;
+
+						playerinventory->SetGetInventorySize(playerinventory->GetInventorySize() - 1);
 					}
 					else
 					{
@@ -103,24 +131,20 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 					player->SetObjectATK(player->GetObjectATK() + item->GetValue());
 					playerEquipInven->SetWeapon(item);
 
-					//인벤토리에서 삭제
-					// erase하면 벡터의 사이즈가 줄어듦
-					// 그냥 it위치를 null하는게 나을듯
 					it->first = nullptr;
 					it->second = 0;
 
-
-
 					// 여기서 땡겨주는 작업 + size줄이기
 					int i = iInput;
-					auto Nextit = it;
+					auto Nextit = it + 1;
 					for (; i < playerinventory->GetInventorySize() - 1; ++i)
 					{
-						++Nextit;
+
 						it->first = Nextit->first;
 						it->second = Nextit->second;
+						++it;
+						++Nextit;
 					}
-				
 
 					// 마지막요소 삭제
 					Nextit->first = nullptr;
@@ -153,27 +177,24 @@ void CBehave_ItemUse::UseItem(CPlayer* player)
 					playerEquipInven->SetArmor(item);
 
 					//인벤토리에서 삭제
-					// erase하면 벡터의 사이즈가 줄어듦
-					// 그냥 it위치를 null하는게 나을듯
 					it->first = nullptr;
 					it->second = 0;
 
-
-
 					// 여기서 땡겨주는 작업 + size줄이기
 					int i = iInput;
-					auto Nextit = it;
+					auto Nextit = it + 1;
 					for (; i < playerinventory->GetInventorySize() - 1; ++i)
 					{
-						++Nextit;
+
 						it->first = Nextit->first;
 						it->second = Nextit->second;
+						++it;
+						++Nextit;
 					}
 
-
 					// 마지막요소 삭제
-					Nextit->first = nullptr;
-					Nextit->second = 0;
+					it->first = nullptr;
+					it->second = 0;
 
 					playerinventory->SetGetInventorySize(playerinventory->GetInventorySize() - 1);
 				}

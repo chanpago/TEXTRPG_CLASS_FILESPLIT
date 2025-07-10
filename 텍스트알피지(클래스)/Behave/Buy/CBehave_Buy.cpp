@@ -31,6 +31,15 @@ bool CBehave_Buy::Buy(CPlayer* player, std::shared_ptr<CBaseThing> something)
 	2. 인벤에 넣기
 	*/
 
+
+
+	if (player->GetInventory()->GetInventorySize() == 5)
+	{
+		std::cout << "인벤토리가 다 찼습니다!" << std::endl;
+		system("pause");
+		return false;
+	}
+
 	// 살 수 있는 경우
 	if (player->GetMoney() >= something->GetPrice() && something)
 	{

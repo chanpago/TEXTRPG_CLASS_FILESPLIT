@@ -11,7 +11,7 @@ CTier3Armor::~CTier3Armor()
 void CTier3Armor::Initialize()
 {
 	// 이름, 가격, 등급, 타입, 아머량, 고유번호
-	SetArmor(new ARMORINFO("초급 방어구", 500, 3, 2, 10, 20));
+	SetArmor(new ARMORINFO("초급 방어구", 500, 3, 1, 10, 20));
 }
 
 void CTier3Armor::Update()

@@ -87,7 +87,7 @@ void CBehave_Unequip::UnEquipment(CPlayer* player)
 			break;
 
 		default:
-			std::cout << "잘 못 입력하셨습니다!" << std::endl;
+			std::cout << "잘못 입력하셨습니다!" << std::endl;
 			break;
 		}
 

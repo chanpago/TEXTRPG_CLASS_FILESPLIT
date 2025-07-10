@@ -11,7 +11,7 @@ CTier2Armor::~CTier2Armor()
 void CTier2Armor::Initialize()
 {
 	// 이름, 가격, 등급, 타입, 아머량, 고유번호
-	SetArmor(new ARMORINFO("중급 방어구", 1000, 2, 2, 30, 21));
+	SetArmor(new ARMORINFO("중급 방어구", 1000, 2, 1, 30, 21));
 }
 
 void CTier2Armor::Update()
