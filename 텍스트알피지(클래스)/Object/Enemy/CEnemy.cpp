@@ -8,6 +8,3 @@ CEnemy::~CEnemy()
 {
 }
 
-void CEnemy::Die() const
-{
-}

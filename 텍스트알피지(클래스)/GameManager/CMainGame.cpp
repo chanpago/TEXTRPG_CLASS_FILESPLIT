@@ -33,10 +33,14 @@ void CMainGame::Initialize()
 	//여기에 플레이어 생성하는 함수 들어가야 할듯
 	
 	m_pPlayer = new CPlayer;
+	if (!m_pPlayer) return;
+
 	m_pPlayer->Initialize();
 	
 
 	m_pBehaveManager = new CBehaveManager;
+	if (!m_pBehaveManager) return;
+
 	m_pBehaveManager->Initialize();
 	
 }

@@ -33,7 +33,7 @@ public:
 	inline void					SetObjectHP(int iHPValue)   { m_pObject->iHealthValue = iHPValue; }
 	inline void					SetObjectATK(const int ATKValue) { m_pObject->iAttackValue = ATKValue; }
 	
-private:
+protected:
 	OBJECTINFO*		m_pObject;
 };
 

@@ -10,9 +10,9 @@ public:
 	~CBehave_ItemUse();
 
 public:
-	void Initialize();
-	void Update();
-	void Release();
+	void Initialize()override;
+	void Update()override;
+	void Release()override;
 
 	void UseItem(CPlayer* player);
 };

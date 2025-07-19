@@ -11,9 +11,9 @@ public:
 	~CBehave_Sell();
 
 public:
-	void Initialize();
-	void Update();
-	void Release();
+	void Initialize()override;
+	void Update()override;
+	void Release()override;
 
 	void Sell(CPlayer* player);
 };

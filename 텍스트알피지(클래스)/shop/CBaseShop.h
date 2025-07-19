@@ -5,8 +5,8 @@ class CPlayer;
 class CBaseShop
 {
 public:
-	CBaseShop();
-	virtual ~CBaseShop();
+	CBaseShop() {};
+	virtual ~CBaseShop() {};
 
 public:
 	virtual void Initialize() = 0;

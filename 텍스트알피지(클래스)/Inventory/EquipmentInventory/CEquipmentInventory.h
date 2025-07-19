@@ -14,12 +14,12 @@ public:
 
 
 public:
-	void Initialize();
-	void Update();
-	void Release();
+	void Initialize()override;
+	void Update()override;
+	void Render()override;
+	void Release()override;
 
-	void Render();
-
+public:
 	bool IsWeapon() const;
 	bool IsArmor() const;
 

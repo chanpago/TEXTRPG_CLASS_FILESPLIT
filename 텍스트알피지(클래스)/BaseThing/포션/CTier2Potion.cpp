@@ -6,6 +6,7 @@ CTier2Potion::CTier2Potion()
 
 CTier2Potion::~CTier2Potion()
 {
+	Release();
 }
 
 void CTier2Potion::Initialize()
@@ -21,9 +22,14 @@ void CTier2Potion::Update()
 void CTier2Potion::Render()
 {
 	std::cout << "========================================" << std::endl;
-	std::cout << "이름 : " << (*GetPotionInfo())->sName << std::endl;
-	std::cout << "가격 : " << (*GetPotionInfo())->iPrice << std::endl;
-	std::cout << "티어 : " << (*GetPotionInfo())->iTier << std::endl;
-	std::cout << "회복력 :" << (*GetPotionInfo())->iValue << std::endl;
+	std::cout << "이름 : " << m_pPotionInfo->sName << std::endl;
+	std::cout << "가격 : " << m_pPotionInfo->iPrice << std::endl;
+	std::cout << "티어 : " << m_pPotionInfo->iTier << std::endl;
+	std::cout << "회복력 :" << m_pPotionInfo->iValue << std::endl;
 	std::cout << "========================================" << std::endl;
+}
+
+void CTier2Potion::Release()
+{
+	SAFE_DELETE(m_pPotionInfo);
 }

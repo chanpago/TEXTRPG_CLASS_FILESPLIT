@@ -10,7 +10,7 @@ class CTier2Shop : public CBaseShop
 {
 public:
 
-	CTier2Shop();
+	CTier2Shop() {};
 	~CTier2Shop();
 	
 public:
@@ -23,6 +23,6 @@ public:
 
 private:
 	std::unordered_map<std::shared_ptr<CBaseThing>, int> ItemList;
-	CBehave_Buy* BuyItem;
+	CBehave_Buy* BuyItem{};
 };
 

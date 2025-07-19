@@ -10,19 +10,19 @@ class CTier3Shop : public CBaseShop
 {
 public:
 
-	CTier3Shop();
+	CTier3Shop() {};
 	~CTier3Shop();
 
 public:
-	void Initialize();
-	void Update(CPlayer* player);
-	void Release();
+	void Initialize()override;
+	void Update(CPlayer* player)override;
+	void Release()override;
 
-	void Render();
+	void Render()override;
 
 
 private:
 	std::unordered_map<std::shared_ptr<CBaseThing>,int> ItemList;
-	CBehave_Buy* BuyItem;
+	CBehave_Buy* BuyItem{};
 };
 

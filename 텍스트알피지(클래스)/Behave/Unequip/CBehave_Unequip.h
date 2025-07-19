@@ -11,9 +11,9 @@ public:
 	~CBehave_Unequip();
 
 public:
-	void Initialize();
-	void Update();
-	void Release();
+	void Initialize()override;
+	void Update()override;
+	void Release()override;
 
 	void UnEquipment(CPlayer* player);
 private:

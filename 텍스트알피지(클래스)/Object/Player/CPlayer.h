@@ -59,10 +59,10 @@ public:
 	inline int					GetMoney()const				{ return m_pPlayerInfo->iMoney; }
 	inline CPlayerInventory*	GetInventory()const			{ return m_pPlayerInventory; }
 	inline CEquipmentInventory* GetEquipInventory()const	{ return m_pEquipmentInventory; }
-	inline int					GetMAXHP()					{ return (*GetObject())->iMaxHealthValue; }
+	inline int					GetMAXHP()					{ return m_pObject->iMaxHealthValue; }
 
 	// setter
-	inline void					SetEXP(const int iNum)			{ (*GetObject())->iNowEXP = iNum; }
+	inline void					SetEXP(const int iNum)			{ m_pObject->iNowEXP = iNum; }
 	inline void					SetMoney(const int iNewMoney)   { m_pPlayerInfo->iMoney = iNewMoney; }
 	void						SetPlayerInfo();
 	void						SetPlayerInven();
@@ -78,9 +78,9 @@ private:
 	CPlayer& operator=(const CPlayer&);
 
 private:
-	PLAYERINFO* m_pPlayerInfo;
-	CEquipmentInventory* m_pEquipmentInventory;
-	CPlayerInventory* m_pPlayerInventory;
+	PLAYERINFO* m_pPlayerInfo{};
+	CEquipmentInventory* m_pEquipmentInventory{};
+	CPlayerInventory* m_pPlayerInventory{};
 
 
 };

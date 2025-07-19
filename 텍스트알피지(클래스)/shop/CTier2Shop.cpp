@@ -7,9 +7,6 @@
 #include "Buy/CBehave_Buy.h"
 #include "Player/CPlayer.h"
 
-CTier2Shop::CTier2Shop() : BuyItem(nullptr)
-{
-}
 
 CTier2Shop::~CTier2Shop()
 {

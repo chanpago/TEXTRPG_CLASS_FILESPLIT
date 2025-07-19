@@ -6,27 +6,31 @@
 class CBaseArmor : public CBaseThing
 {
 public:
-	CBaseArmor();
-	virtual ~CBaseArmor();
+	CBaseArmor() {};
+	virtual ~CBaseArmor() {};
 
 public:
 	virtual void Initialize();
 	virtual void Update();
+	virtual void Render();
 	virtual void Release();
+
+public:
+
 	
 	// getter
-	inline ARMORINFO**		GetArmorInfo()			{ return &m_pArmorInfo;}
-	int						GetType()const			{ return m_pArmorInfo->iType; }
-	int						GetUniqueNum() const	{ return m_pArmorInfo->iUniqueNumber; }
-	int						GetPrice()const			{ return m_pArmorInfo->iPrice; }
-	std::string				GetName() const			{ return m_pArmorInfo->sName; }
-	int						GetValue()const			{ return m_pArmorInfo->iArmorRate; }
+	inline ARMORINFO**		GetArmorInfo()			      { return &m_pArmorInfo;}
+	int						GetType()const override       { return m_pArmorInfo->iType; }
+	int						GetUniqueNum() const override { return m_pArmorInfo->iUniqueNumber; }
+	int						GetPrice()const	override      { return m_pArmorInfo->iPrice; }
+	std::string				GetName() const	override      { return m_pArmorInfo->sName; }
+	int						GetValue()const	override      { return m_pArmorInfo->iArmorRate; }
 
 	// setter
 	inline void				SetArmor(ARMORINFO* ArmorInfo) { m_pArmorInfo = ArmorInfo; }
 
-private:
-	ARMORINFO* m_pArmorInfo;
+protected:
+	ARMORINFO* m_pArmorInfo{};
 
 };
 

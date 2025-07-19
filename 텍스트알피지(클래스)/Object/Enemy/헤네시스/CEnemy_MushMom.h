@@ -9,6 +9,6 @@ public:
 	~CEnemy_MushMom();
 
 public:
-	inline void			Die() const { std::cout << "¸Ó½¬¸¾ÀÌ Á×¾ú½À´Ï´Ù! " << std::endl; }
+	inline void	Die() const override { std::cout << "¸Ó½¬¸¾ÀÌ Á×¾ú½À´Ï´Ù! " << std::endl; }
 };
 

@@ -16,7 +16,7 @@
 
 
 
-CPlayer::CPlayer() : m_pPlayerInfo(nullptr) {}																							 
+CPlayer::CPlayer(){}																							 
 
 CPlayer::~CPlayer()
 {
@@ -154,14 +154,17 @@ void CPlayer::CreateSkill(const int iNum)
 	{
 	case 1:
 		m_pPlayerInfo->pSkills = new WarriorSkill;
+		if (!m_pPlayerInfo->pSkills)return;
 		m_pPlayerInfo->pSkills->AddSkill(new W1_PowerStrike);
 		break;
 	case 2:
 		m_pPlayerInfo->pSkills = new MagicianSkill;
+		if (!m_pPlayerInfo->pSkills)return;
 		m_pPlayerInfo->pSkills->AddSkill(new M1_MagicClaw);
 		break;
 	case 3:
 		m_pPlayerInfo->pSkills = new ThiefSkill;
+		if (!m_pPlayerInfo->pSkills)return;
 		m_pPlayerInfo->pSkills->AddSkill(new T1_LuckySeven);
 		break;
 	default :
@@ -172,8 +175,8 @@ void CPlayer::CreateSkill(const int iNum)
 
 void CPlayer::AddEXP(const int iNum)
 {
-	(*GetObject())->iNowEXP += iNum;
-	if ((*GetObject())->iNowEXP >= (*GetObject())->iMaxEXP) LevelUP();
+	m_pObject->iNowEXP += iNum;
+	if (m_pObject->iNowEXP >= m_pObject->iMaxEXP) LevelUP();
 	
 }
 
@@ -194,12 +197,12 @@ void CPlayer::SetPlayerEquipInven()
 
 void CPlayer::LevelUP()
 {
-	(*GetObject())->iLevel++;
-	(*GetObject())->iNowEXP -= (*GetObject())->iMaxEXP;
-	(*GetObject())->iMaxEXP = static_cast<int>(static_cast<float>((*GetObject())->iMaxEXP) * 1.5f);
+	m_pObject->iLevel++;
+	m_pObject->iNowEXP -= m_pObject->iMaxEXP;
+	m_pObject->iMaxEXP = static_cast<int>(static_cast<float>(m_pObject->iMaxEXP) * 1.5f);
 	m_pPlayerInfo->iStatPoint += 4;
-	SetObjectHP((*GetObject())->iMaxHealthValue);
-	(*GetObject())->iHealthValue = (*GetObject())->iMaxHealthValue;
+	SetObjectHP(m_pObject->iMaxHealthValue);
+	m_pObject->iHealthValue = m_pObject->iMaxHealthValue;
 	std::cout << "레벨이 올랐습니다!" << std::endl;
 }
 
@@ -281,11 +284,11 @@ void CPlayer::CalcAttackValue()
 {
 	if (GetObjectType() == 전사)
 	{
-		(*GetObject())->iAttackValue = (*GetObject())->iAttackValue + m_pPlayerInfo->iSTR;
-		(*GetObject())->iMaxHealthValue = (*GetObject())->iLevel * 10 + m_pPlayerInfo->iSTR * 10;
+		m_pObject->iAttackValue = m_pObject->iAttackValue + m_pPlayerInfo->iSTR;
+		m_pObject->iMaxHealthValue = m_pObject->iLevel * 10 + m_pPlayerInfo->iSTR * 10;
 	}
 	if (GetObjectType() == 도적)
-		(*GetObject())->iAttackValue = static_cast<int>(10 + static_cast<float>(m_pPlayerInfo->iLUK)/2.0f);
+		m_pObject->iAttackValue = static_cast<int>(10 + static_cast<float>(m_pPlayerInfo->iLUK)/2.0f);
 }
 
 

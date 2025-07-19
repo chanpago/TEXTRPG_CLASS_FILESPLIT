@@ -1,13 +1,8 @@
 #include "CBasePotion.h"
 
-CBasePotion::CBasePotion() : m_pPotionInfo(nullptr)
-{
-}
 
-CBasePotion::~CBasePotion()
-{
-	Release();
-}
+
+
 
 CBasePotion::CBasePotion(const CBasePotion& Potion)
 {
@@ -22,7 +17,11 @@ void CBasePotion::Update()
 {
 }
 
+void CBasePotion::Render()
+{
+}
+
 void CBasePotion::Release()
 {
-	SAFE_DELETE(m_pPotionInfo);
+	
 }

@@ -27,3 +27,8 @@ void CTier3Armor::Render()
 	std::cout << "¹æ¾î·Â :" << (*GetArmorInfo())->iArmorRate << std::endl;
 	std::cout << "========================================" << std::endl;
 }
+
+void CTier3Armor::Release()
+{
+	SAFE_DELETE(m_pArmorInfo);
+}

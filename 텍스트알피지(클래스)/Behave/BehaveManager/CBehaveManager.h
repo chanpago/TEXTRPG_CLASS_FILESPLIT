@@ -16,10 +16,10 @@ public:
 
 
 	// getter
-	inline CBehave_ItemUse* GetBehave_ItemUse() { return Behave_UseItem; }
-	inline CBehave_Unequip* GetBehave_Unequip() { return Behave_Unequip; }
-	inline CBehave_Sell*	GetBehave_Sell()	{ return Behave_Sell; }
-	inline CBehave_Fight*	GetBehave_Fight()	{ return Behave_Fight; }
+	inline CBehave_ItemUse* GetBehave_ItemUse() const { return Behave_UseItem; }
+	inline CBehave_Unequip* GetBehave_Unequip() const { return Behave_Unequip; }
+	inline CBehave_Sell*	GetBehave_Sell()	const { return Behave_Sell; }
+	inline CBehave_Fight*	GetBehave_Fight()	const { return Behave_Fight; }
 
 	// setter
 

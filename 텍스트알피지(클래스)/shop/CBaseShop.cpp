@@ -3,11 +3,3 @@
 #include "무기/CBaseWeapon.h"
 #include "방어구/CBaseArmor.h"
 
-CBaseShop::CBaseShop()
-{
-}
-
-CBaseShop::~CBaseShop()
-{
-
-}

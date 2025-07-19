@@ -10,7 +10,7 @@ public:
 	CEnemy();
 	virtual ~CEnemy();
 
-	virtual void		Die() const;
+
 
 
 private:

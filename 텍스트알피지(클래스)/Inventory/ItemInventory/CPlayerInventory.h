@@ -10,17 +10,20 @@ public:
 	~CPlayerInventory();
 
 public:
-	void Initialize();
-	void Update();
+	void Initialize()override;
+	void Update()override;
 	void Update(std::shared_ptr<CBaseThing> CItem, const int iItemtype, const int iUniqueNum);
-	void Release();
+	void Render()override;
+	void Release()override;
 
-	void Render();
+	
 
 	// getter
 	//std::unordered_map< std::shared_ptr < CBaseThing>, int>* GetInventory() { return &m_Inventory; }
 	inline std::vector<std::pair<std::shared_ptr<CBaseThing>, int>>* GetInventory() { return &m_Inventory; }
 	inline int GetInventorySize() const{ return m_iInventorySize; }
+
+	// setter
 	inline void SetGetInventorySize(const int iNum) { m_iInventorySize = iNum; }
 
 private:

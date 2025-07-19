@@ -10,10 +10,8 @@ public:
 	CEnemy_Slime();
 	~CEnemy_Slime();
 
-
-	
 public:
-	inline void			Die() const { std::cout << "슬라임이 죽었습니다! " << std::endl; }
+	inline void	Die()const override { std::cout << "슬라임이 죽었습니다! " << std::endl; }
 
 };
 

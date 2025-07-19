@@ -9,6 +9,6 @@ public:
 	~CEnemy_RibbonPig();
 	
 public:
-	inline void			Die() const { std::cout << "¸®º»µÅÁö°¡ Á×¾ú½À´Ï´Ù! " << std::endl; }
+	inline void	Die() const override { std::cout << "¸®º»µÅÁö°¡ Á×¾ú½À´Ï´Ù! " << std::endl; }
 };
 

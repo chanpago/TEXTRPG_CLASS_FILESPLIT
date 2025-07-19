@@ -10,9 +10,9 @@ public:
 
 
 public:
-	void Initialize();
-	void Update();
-
-	void Render();
+	void Initialize()override;
+	void Update()override;
+	void Render()override;
+	void Release()override;
 };
 
